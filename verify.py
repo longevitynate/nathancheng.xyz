@@ -43,5 +43,15 @@ for item in report['pages']:
     value=re.sub(r'\s+',' ',''.join(p.content)).strip()
     assert hashlib.sha256(value.encode()).hexdigest()==item['text_sha256'], f'Rendered body mismatch: {item["path"]}'
 for f in OUT.glob('*.xml'): ET.parse(f)
+audit=json.loads((ROOT/'source/sitemap-audit.json').read_text())
+live_paths={p for paths in audit['sitemaps'].values() for p in paths}
+assert live_paths==set(report['routes']), 'Migrated routes differ from the live sitemap inventory'
+ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+for name, paths in audit['sitemaps'].items():
+    migrated={urlsplit(n.text).path for n in ET.parse(OUT/name).findall('s:url/s:loc',ns)}
+    assert migrated==set(paths), f'Sitemap URL mismatch: {name}'
+index={urlsplit(n.text).path.lstrip('/') for n in ET.parse(OUT/'sitemap_index.xml').findall('s:sitemap/s:loc',ns)}
+assert index==set(audit['sitemaps']), 'Sitemap index mismatch'
 assert not any(re.search(r'src="https?://(?:www\.)?nathancheng\.xyz/wp-content/', f.read_text()) for f in OUT.rglob('*.html')), 'WordPress asset dependency remains'
 print(f'PASS: {checked} HTML documents, all internal assets/links, 6 exact content hashes, and XML feeds/sitemaps.')
+print(f'PASS: All {len(live_paths)} live sitemap URLs are migrated; all 5 original child sitemap paths are preserved.')

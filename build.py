@@ -98,6 +98,8 @@ for kind, prefix, key in [('categories','category','categories'),('tags','tag','
         write(route,shell(term['name'],route,body)); archives.append(route)
 route = '/author/nathan/'
 write(route,shell('Nathan Cheng',route,f'<section class="archive"><p class="eyebrow">Author</p><h1>Nathan Cheng</h1><p class="lede">{escape(HOME["author"].strip())}</p>{listing([i for i in META if i["type"]=="post"],route)}</section>')); archives.append(route)
+route = '/author/admin/'
+write(route,shell('Admin',route,'<section class="archive"><p class="eyebrow">Author</p><h1>Admin</h1><p>0 posts</p><p>It seems we cannot find what you are looking for. Perhaps searching can help.</p></section>')); archives.append(route)
 
 # The browser search works without a server, network API, or dependencies.
 (OUT/'assets/search-data.js').write_text('window.SITE_SEARCH = '+json.dumps(search,ensure_ascii=False).replace('</','<\\/')+';\n')
@@ -107,7 +109,11 @@ def sitemap(paths): return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmln
 (OUT/'sitemap.xml').write_text(sitemap(routes))
 for kind, filename in [('post','post-sitemap.xml'),('page','page-sitemap.xml')]:
     (OUT/filename).write_text(sitemap(['/']+['/'+i['slug']+'/' for i in META if i['type']==kind]))
-(OUT/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+ORIGIN+'/sitemap.xml\n')
+for prefix, filename in [('category','category-sitemap.xml'),('tag','post_tag-sitemap.xml'),('author','author-sitemap.xml')]:
+    (OUT/filename).write_text(sitemap([p for p in archives if p.startswith('/'+prefix+'/')]))
+sitemap_files = ['post-sitemap.xml','page-sitemap.xml','category-sitemap.xml','post_tag-sitemap.xml','author-sitemap.xml']
+(OUT/'sitemap_index.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<sitemap><loc>'+ORIGIN+'/'+name+'</loc></sitemap>' for name in sitemap_files)+'</sitemapindex>\n')
+(OUT/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+ORIGIN+'/sitemap_index.xml\n')
 rss = '<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Nathan Cheng</title><link>'+ORIGIN+'</link><description>Adventures in Longevity.</description>'
 for item in META:
     if item['type']!='post': continue
