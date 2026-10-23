@@ -1,0 +1,311 @@
+[
+  {
+    "id": 1111,
+    "date": "2021-05-31T21:58:04",
+    "date_gmt": "2021-05-31T21:58:04",
+    "guid": {
+      "rendered": "https://nathancheng.ca/?p=1111"
+    },
+    "modified": "2024-03-19T00:55:23",
+    "modified_gmt": "2024-03-19T00:55:23",
+    "slug": "about-me",
+    "status": "publish",
+    "type": "post",
+    "link": "https://nathancheng.xyz/about-me/",
+    "title": {
+      "rendered": "About me, and some of my work."
+    },
+    "content": {
+      "rendered": "\n<p>Hi, I&#8217;m <a href=\"https://twitter.com/realNathanCheng\">Nathan Cheng</a>. I&#8217;m on a mission to end biological aging. Here are some of the projects I&#8217;ve created or am affiliated with:</p>\n\n\n\n<ul><li><a href=\"https://www.vitalism.io\">VITALISM</a>, Co-founder &#8211; The revolutionary movement to get humanity to make fighting aging and death its #1 priority. </li><li><a href=\"http://longbiofellowship.org\">Longevity Biotech Fellowship</a>, Co-Executive Director &#8211; A nonprofit with a mission to increase the number of people working on longevity and help maximize their impact.</li><li><a href=\"http://healthspancapital.vc\">Healthspan Capital, General Partner &amp; Co-founder</a> &#8211; Early stage fund investing in LongBio companies. 1st and largest longevity rolling fund on Angel List. </li><li><a href=\"https://www.beondeck.com/longevity-biotech/\">On Deck Longevity Biotech, Program Director</a> &#8211; A continuous community for people to come together to build, join, and invest in revolutionary longevity biotechnology startups. </li><li><a href=\"https://sub.longevitymarketcap.com\">Longevity Marketcap Newsletter</a> &#8211; A weekly newsletter covering developments in the longevity biotech industry. Monthly deep dives into subsectors within longevity biotech.</li><li><a href=\"https://longevitylist.com\">Longevity List</a> &#8211; A website featuring jobs, companies, and investors in the longevity biotech space.</li><li><a href=\"https://longevitybiotechshow.com\">The Longevity Biotech Show </a>&#8211; A weekly live Clubhouse room and recorded podcast that features Q&amp;As with the people building and funding longevity biotechnology. Co-created with Robert Ziman.</li><li><a href=\"https://forum.longevitybase.org\">Longevity Base Forum</a> &#8211; The Stack Exchange for aging biology and longevity biotechnology. Co-creator: <a href=\"https://twitter.com/InquilineKea\">Alex K. Chen</a></li><li><a href=\"https://humansforlongevity.com\">Humans for Longevity</a> &#8211; A literary art project featuring the stories of people who care about longevity why they chose to do something about aging.</li><li><a href=\"https://onepercentbet.org\">One Percent Bet</a> &#8211; An initiative to get individuals and companies to pledge 1% of their resources towards ending aging. </li></ul>\n\n\n\n<h4>My Longevity Biotech Investing Newsletter:</h4>\n\n\n\n<iframe src=\"https://sub.longevitymarketcap.com/embed\" width=\"100%\" height=\"320\" style=\"border:1px solid #EEE; background:white;\" frameborder=\"0\" scrolling=\"no\"></iframe>\n\n\n\n<p>If you&#8217;d like to support, please consider funding my work on <a href=\"https://patreon.com/nathancheng\">Patreon</a>.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "Hi, I&#8217;m Nathan Cheng. I&#8217;m on a mission to end biological aging. Here are some of the projects I&#8217;ve created or am affiliated with: VITALISM, Co-founder &#8211; The revolutionary movement&hellip;\n",
+      "protected": false
+    },
+    "author": 2,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "open",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": [],
+    "categories": [
+      1
+    ],
+    "tags": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/posts/1111"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/types/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/users/2"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/comments?post=1111"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 12,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/posts/1111/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1140,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/posts/1111/revisions/1140"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/media?parent=1111"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/categories?post=1111"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/tags?post=1111"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 973,
+    "date": "2019-05-03T18:46:16",
+    "date_gmt": "2019-05-03T18:46:16",
+    "guid": {
+      "rendered": "https://nathancheng.ca/?p=973"
+    },
+    "modified": "2021-10-13T02:31:25",
+    "modified_gmt": "2021-10-13T02:31:25",
+    "slug": "day-1-molecular-biology-of-the-cell-chapter-1-cells-and-genomes",
+    "status": "publish",
+    "type": "post",
+    "link": "https://nathancheng.xyz/day-1-molecular-biology-of-the-cell-chapter-1-cells-and-genomes/",
+    "title": {
+      "rendered": "Day 1: Molecular Biology of the Cell Chapter 1 -Cells and Genomes."
+    },
+    "content": {
+      "rendered": "<div class=\"pk-alert pk-alert-info\" role=\"alert\" >\n<p><strong>Update:</strong> I&#8217;m currently taking MIT&#8217;s 7.00x Introduction to biology course online at Edx.org. Highly recommended.</p>\n<p>Hello friends! Unfortunately I will have to put this biology learning project on hold. I&#8217;m currently focussing my efforts on a new startup: Biohack Stack.</p>\n<p>There&#8217;s never enough time to do everything I want. One lifetime is not enough! Reversing ageing will address this problem.</p>\n</div>\n<p></p>\n\n\n<p>I&#8217;m attempting to compress a 4-year biology degree into 1 year of <a href=\"https://nathancheng.xyz/ride-along-compressing-a-biology-undergrad-into-1-year/\">self-directed study</a> so I can eventually launch a startup in biotech / anti-aging. I&#8217;m starting off with a basic overview of <em>Molecular Biology of the Cell</em> by Alberts et al. (<a href=\"https://www.ncbi.nlm.nih.gov/books/NBK21054/\">textbook text here</a>) Here are my personal thoughts and questions from Chapter 1. </p>\n\n\n\n[[Biology]]\n\n\n\n<h2>Notes</h2>\n\n\n\n<ul><li>Hereditary information of organisms is encoded in DNA.</li><li>The alphabet of DNA consists of four nucleotide monors: adenine, guanine, thymine, and cytosine.</li><li>The backbone of DNA is formed from a chain of repeating sugar and phosphate. </li><li>Nucleotides pair up in a complementary way. C-G, A-T. There are hydrogen bonds in between the nucleotides. These weak bonds allow the DNA helix to be pulled apart without break individual DNA strands.</li><li>The two strand nature of DNA facilitates replication. Split the two strands and then each strand can fill out with its complementary nucleotides. This is called templated polymerization.</li><li><strong>Question: What function does the twist of the DNA helix play? What force causes this twist?</strong></li><li>DNA &#8211;&gt; tRNA &#8211;&gt; amino acids &#8211;&gt; proteins</li><li>RNA is similar to DNA but with a slightly different sugar backbone. Also the thymine monomer is replaced with Uracil. <strong>WHY?</strong> I hope there is a satisfying reason why only one of the nucleotides are replaced going from DNA &#8211;&gt; RNA.</li><li>Three letters of RNA (U, A, C, G) form a codon which codes for an amino acid. There are 64 combinations but only 20 amino acids. i.e degeneracy.</li><li>Not all genes in our DNA code for proteins. Some genes code for RNA that have catalytic, regulatory, or structural function.</li><li>The same gene can create alternative versions of  proteins depending on the way the RNA is processed. </li><li>The human genome has 3 billion base pairs. About 30,000 genes. </li><li>60 genes are common to all life on Earth.</li><li>About 200 genes can be found in all 3 major groups of life on earth: Bacteria, Archaea, and Eukaryotes.</li><li>Prokaryotes do not have a membrane enclosing their DNA. Eukaryotes do.</li><li>Archaea are a bit like bacteria but also a but like eukaryotes.</li><li>The simplest bacteria have about 500 genes.</li><li>Eukaryotes have about an order of magnitude more genes than prokaryotes and about 3 orders of magnitude more non-coding DNA. This is because multicellular organisms DNA has more complex regulation.</li><li>New genes are formed from old genes. It&#8217;s not randomly spelt one letter at a time.</li><li>There are four ways to make new genes: Intragenic mutation (an error in a base pair during replication), duplication of a gene, DNA segment shuffling (hybridization), or horizontal gene transfer.</li><li>Duplication of genes occurred a lot in the evolution of vertebrates. </li><li>Horizontal gene transfer happens a lot in bacteria. Phages can inject new DNA into bacteria. Bacteria can also take in DNA / RNA segments floating around in the environment. Anti-bacterial resistance can be conferred through horizontal gene transfer.</li><li>New genes formed from old genes can be related and have similar function. We can group genes into families. </li><li>Genes that are related but occur in two divergent species are called orthologs.</li><li>Genes that are related but occur in the same species are called paralogs.</li><li>Related genes (ortho and para) are called homologs.</li><li>Often we can get clues about functions of novel genes by comparing them to a database of existing genes. </li><li>Homolog genes can span across yeast &#8211;&gt; humans. Replacing some yeast genes with a human homolog gene may result in a fully functional yeast organism. <strong>CRAZY.</strong></li><li>We can determine the function of a gene through cell biology / observation of mutants and also biochemistry. </li></ul>\n\n\n\n<h2>Thoughts</h2>\n\n\n\n<ul><li>The author(s) are very optimistic that the complexity of biology can be overcome and understood at the cellular level, especially with the use of modern day computing. I wonder what the hard limits are. </li><li>Modelling something like an entire cell seems intractable but perhaps there are some approximations that can be made. </li><li>What is the most complex system we have managed to &#8220;accurately&#8221; (need qualifications here) model? How many orders of magnitude more complex is a cell?</li><li></li></ul>\n\n\n\n<h2>Crazy Tangents: Physics, Ergodic Theorem, and Nassim Taleb</h2>\n\n\n\n<ul><li>There seems to be some major theme of non-ergodicity in evolutionary biology / genetics. I&#8217;ve been thinking a lot about ergodicity ever since I read Nassim Taleb&#8217;s <em>Skin in The Game. </em></li><li>Taleb believes much of financial modelling is incorrect because it assumes ergodicity; that time averages in markets can be modelled by taking an ensemble average over its phase space (possible states). </li><li>In real life ergodicity is broken because if you go bust on day 10, there will be no day 11. You can think of think of going bust as an absorbent barrier. </li><li>In biology, mutations are &#8220;random&#8221; yet we get increasing complexity. Natural selection enforces non-ergodicity with its own absorbent barriers&#8211; pruning &#8220;bad&#8221; mutations and favouring the good ones.</li><li>Ergodicity features prominently in statistical mechanics and many of the fundamental results rest on this assumption. The models we have built on top of this assumption are accurate as far as we know.</li><li>But what if ergodicity is only approximately true in statistical physics? What sort of absorbent barriers could be postulated in a Boltzman model context? I&#8217;m guessing none. We probably just need to recognize we very rarely encounter a box of gas that does not interact with it&#8217;s environment in real life.</li><li>Thinking about the uber long term game of longevity, statistical mechanics and entropy (2nd Law of Thermodynamics) is going to be a major concern. </li><li><strong>Throwing it out there: </strong>Perhaps there is a link to the information blackhole paradox in physics. Blackholes could act as an absorbent barrier that breaks the ergodic theorem on some fundamental level.  </li><li>Just so happens I stumbled on this paper in the comments section of Hacker News Today: Statistical Physics of Adaptation. <a href=\"https://arxiv.org/pdf/1412.1875.pdf\">https://arxiv.org/pdf/1412.1875.pdf</a></li></ul>\n\n\n\n<h2>Textbook Problems</h2>\n\n\n\n<p>1-1. F. The human haemoglobin genes within the same family in the same species (homo sapien) are considered to be paralogs. Orthologs are related genes across different species that diverged evolutionarily.</p>\n\n\n\n<p>1-2. T. Horizontal gene transfer is easier to do in unicellular organisms that only have one strand of DNA to modify. Horizontal gene transfer is possible in multicellular organisms but the transfer would need to affect germ line cells in order for the change to be passed on in the genome of the progeny.</p>\n\n\n\n<p>1-3. T. Most bacteria DNA is coding DNA. Most eukaryote DNA is non-coding.</p>\n\n\n\n<p>1-4. Natural selection has selected for organisms that have DNA error-correction / error resistance. Organisms without such ability would be at a huge disadvantage in propagating their genes. </p>\n\n\n\n<p>1-5. Sequence the DNA to see if the genes are related to any genes of organisms on Earth. If there are similarities it is either contamination or somehow life evolved in a similar manner on Europe &#8212; possible but unlikely. </p>\n\n\n\n<p>1-6. Feeding is merely energy extraction. Photons from the sun have energy. Mixtures of chemicals and ions can also have stored energy. </p>\n\n\n\n<p>1-7.  4.</p>\n\n\n\n<p>1-8. Genes for ribosomal RNA were not necessarily &#8220;born&#8221; &#8220;perfect&#8221;. In fact, it is highly unlikely. The genes evolved slowly but that does not mean they were the best possible genes. This question has a lot of imprecise language.</p>\n\n\n\n<p>1-9. A complex process probably has more &#8220;moving parts&#8221; and proteins / RNA involved. The addition of horizontal gene transfer may have a greater probability of disrupting the process compared to one that is simpler and has fewer proteins / RNA.</p>\n\n\n\n<p>1-10. </p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "I&#8217;m attempting to compress a 4-year biology degree into 1 year of self-directed study so I can eventually launch a startup in biotech / anti-aging. I&#8217;m starting off with a&hellip;\n",
+      "protected": false
+    },
+    "author": 2,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "open",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": [],
+    "categories": [
+      11
+    ],
+    "tags": [
+      13,
+      12
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/posts/973"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/types/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/users/2"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/comments?post=973"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 18,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/posts/973/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1110,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/posts/973/revisions/1110"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/media?parent=973"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/categories?post=973"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/tags?post=973"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 927,
+    "date": "2019-05-02T03:01:26",
+    "date_gmt": "2019-05-02T03:01:26",
+    "guid": {
+      "rendered": "https://nathancheng.ca/?p=927"
+    },
+    "modified": "2021-10-13T02:31:41",
+    "modified_gmt": "2021-10-13T02:31:41",
+    "slug": "ride-along-compressing-a-biology-undergrad-into-1-year",
+    "status": "publish",
+    "type": "post",
+    "link": "https://nathancheng.xyz/ride-along-compressing-a-biology-undergrad-into-1-year/",
+    "title": {
+      "rendered": "Ride along: Compressing a biology undergrad into 1 year."
+    },
+    "content": {
+      "rendered": "\n\n\n<div class=\"pk-alert pk-alert-info\" role=\"alert\" >\n<p><strong>Update:&nbsp;</strong>I&#8217;m still embarking on self-learning via MIT&#8217;s Introduction to Biology course (7.00x) on Edx.org. It&#8217;s an awesome course so far and I highly recommend it.</p>\n<p><strong>Sept 2019 Update:</strong></p>\n<p>Hello friends! Unfortunately I will have to put this biology learning project on hold. I&#8217;m currently focussing my efforts on a new startup: Biohack Stack.</p>\n<p>There&#8217;s never enough time to do everything I want. One lifetime is not enough! Reversing ageing will address this problem. <br></div>\n<p></p>\n\n\n<p>I&#8217;m interested in starting a company that solves the problem of aging in humans. Unfortunately, I studied nuclear engineering in my undergrad and quantum optics for my masters (I dropped out of my PhD &#8212; but that&#8217;s a story for another day).  </p>\n\n\n\n<p>I have not taken a single biology course since Grade 10 Science, other than a brief elective on human physiology in undergrad, so I&#8217;m a little behind.</p>\n\n\n\n<p>What do I need to learn? Well, here&#8217;s an example of a<a href=\"https://biology.mit.edu/wp-content/uploads/2019/04/Course_7_SB-_AY20.pdf\"> biology undergrad curriculum at MIT.&nbsp;</a>Also, a <a href=\"https://biology.mit.edu/wp-content/uploads/2019/04/Course_6-7_SB_AY20.pdf\">Computational Biology degree curriculum at MIT.</a></p>\n\n\n\n<p>I only have so much money and time off to be able to undertake this knowledge infusion. So, I&#8217;ve decided to try to compress a 4 year biology undergrad into 1 year. Is this crazy / arrogant? Probably. But here is how that math works out:</p>\n\n\n\n<ul><li>A standard biology undergrad takes around 4 years to complete. But if you include summer breaks it actually only takes about 3 years to complete. </li><li>Engineers at my school took 20% more courses than science majors, so I assume I can shave the time to completion to 2.4 years if I just study at that rate.</li><li>I won&#8217;t be doing any lab work.</li><li>I won&#8217;t be taking any humanities electives.</li><li>I have already taken 1st year organic and inorganic chemistry courses.</li><li>I already know basic computer programming</li><li>I have taken thermodynamics and fluid dynamics courses.</li><li>I have taken calculus (no stats though&#8230;.)</li><li>I will probably cut a certain courses out that are superfluous.</li><li>I won&#8217;t be doing most of the assignments. Mainly just doing the practice exams as a monitor of my knowledge. </li></ul>\n\n\n\n<p>After cutting out all the fat I think compressing a 4-year curriculum into 1 year could be done in theory. Even if I miss the mark, I think the effort will be net positive so long as I don&#8217;t over exert myself.</p>\n\n\n\n<p><strong>Rule&nbsp;#1:</strong> I will not sacrifice my health in order to study harder. I did way too many all-nighters in college and I am only now realizing how damaging that was to my health. Evolution has not engineered a solution for sleep deprivation like it has for food deprivation (fat storage).</p>\n\n\n\n<h2>Game Plan</h2>\n\n\n\n<ol><li><strong>Take the first few weeks to get a general understanding of the basics of genetics and cell biology by studying </strong><em><strong>Molecular&nbsp;Biology&nbsp;of&nbsp;the&nbsp;Cell</strong></em><strong> by Alberts, et al.</strong> This textbook is used in a lot of 2nd or 3rd year cell bio courses apparently. It&#8217;s also the book that <a href=\"http://ldeming.com\">Laura Deming</a> recommends first for people interested in longevity research.</li><li><strong>Decide on what curriculum I want to take.</strong> Most likely use MIT Open Courseware. I am tempted to lean towards computational biology, as this will also let me pick up more computing skills in the process.</li><li><strong>Cram, cram, cram.</strong></li><li><strong>Test thyself. </strong>Gauge my own understanding by doing and grading my own practice exams. </li><li><strong>Teach others.</strong> One of the best ways to really understand a subject is to teach it to someone else*. Bonus points if you can teach it to children. I may make Youtube videos from my notes as a public resource. </li></ol>\n\n\n\n<p>*Funny little anecdote: I was struggling to make money during my holiday working visa stay in Australia and decided to pick up any private tutoring gig I could. This included a 2nd year electrical engineering student taking courses I was mostly familiar with, but some 20% of the course was new material to me. THAT was definitely an interesting way to learn.</p>\n\n\n\n<h2>Challenges </h2>\n\n\n\n<ul><li>It&#8217;s been 7 years since I finished my master&#8217;s degree. Subjectively, my mind does not feel as sharp as it once did. </li><li>These days, I am never really required to memorize large amounts of information. Studying physics was pretty light on that, too. </li></ul>\n\n\n\n<h2>How much will it all cost?</h2>\n\n\n\n<ul><li>There are a lot of free resources on the net. I plan to use <a href=\"https://ocw.mit.edu/index.htm\">MIT Opencourse ware</a>, but some courses might not be available, or they are out of date. Other Open course ware from other universities or Coursera might serve as good substitutions.</li><li>Many textbooks have PDF versions which are cheap or free (google Libgen&#8230;.)</li><li>I anticipate the cost of supplies will be roughly $0. Amazing times we live in.</li></ul>\n\n\n\n<p>The main cost will be the opportunity cost of not working during this time of study. While this cost is important, the main motivation to compress the curriculum is so I can get started on solving the problem of aging sooner.</p>\n\n\n\n<h2>Staying motivated</h2>\n\n\n\n<p>I didn&#8217;t have a hard time staying motivated in university. I studied hard because I was a  stereotypical &#8220;good asian&#8221; on the mindless pursuit of good grades.</p>\n\n\n\n<p>Things are different now (still asian though!). I am not looking to impress anyone. I just don&#8217;t want to watch all my friends and family get old, frail, fraught with debilitating disease, and then die before I also succumb to the same fate. This is a great motivator, incidentally. </p>\n\n\n\n<p>The problem is sometimes we get so wrapped up in the banality of everyday life routines and forget how little time we have left if nothing is done about this problem of aging. People don&#8217;t like to think about death, so we will subtly ignore it and instead worry about where to go for dinner, office politics, career and retirement planning, etc. </p>\n\n\n\n<p>If there is anyone else out there who feels as I do, and also wants to do a crash course in biology, please feel free to contact me. It would be great to discuss and learn with others. </p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "I&#8217;m interested in starting a company that solves the problem of aging in humans. Unfortunately, I studied nuclear engineering in my undergrad and quantum optics for my masters (I dropped&hellip;\n",
+      "protected": false
+    },
+    "author": 2,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "open",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": [],
+    "categories": [
+      11
+    ],
+    "tags": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/posts/927"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/posts"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/types/post"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/users/2"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/comments?post=927"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 17,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/posts/927/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1127,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/posts/927/revisions/1127"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/media?parent=927"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "category",
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/categories?post=927"
+        },
+        {
+          "taxonomy": "post_tag",
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/tags?post=927"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "id": 13,
+    "count": 1,
+    "description": "",
+    "link": "https://nathancheng.xyz/tag/accelerated-learning/",
+    "name": "accelerated learning",
+    "slug": "accelerated-learning",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/tags/13"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/posts?tags=13"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "count": 1,
+    "description": "",
+    "link": "https://nathancheng.xyz/tag/molecular-biology-of-the-cell/",
+    "name": "molecular biology of the cell",
+    "slug": "molecular-biology-of-the-cell",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/tags/12"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/posts?tags=12"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

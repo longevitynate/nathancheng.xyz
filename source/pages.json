@@ -1,0 +1,254 @@
+[
+  {
+    "id": 1066,
+    "date": "2020-06-08T16:47:30",
+    "date_gmt": "2020-06-08T16:47:30",
+    "guid": {
+      "rendered": "https://nathancheng.ca/coming-soon/"
+    },
+    "modified": "2020-06-08T16:47:30",
+    "modified_gmt": "2020-06-08T16:47:30",
+    "slug": "coming-soon",
+    "status": "publish",
+    "type": "page",
+    "link": "https://nathancheng.xyz/coming-soon/",
+    "title": {
+      "rendered": "Coming Soon"
+    },
+    "content": {
+      "rendered": "\t\t\n\t\t<h1 class=\"has-text-align-center\">I&#8217;m working on something amazing!<br>But don&#8217;t worry, I&#8217;ll back soon. </h1>\n\t\t\n\t",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "I&#8217;m working on something amazing!But don&#8217;t worry, I&#8217;ll back soon.\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/pages/1066"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/comments?post=1066"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 0,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/pages/1066/revisions"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/media?parent=1066"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 705,
+    "date": "2019-09-30T20:12:20",
+    "date_gmt": "2019-09-30T20:12:20",
+    "guid": {
+      "rendered": "https://nathancheng.ca/?page_id=705"
+    },
+    "modified": "2020-08-16T01:48:16",
+    "modified_gmt": "2020-08-16T01:48:16",
+    "slug": "about",
+    "status": "publish",
+    "type": "page",
+    "link": "https://nathancheng.xyz/about/",
+    "title": {
+      "rendered": "About"
+    },
+    "content": {
+      "rendered": "\n<figure class=\"wp-block-image is-resized\"><img src=\"https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867-768x1024.jpg\" alt=\"\" class=\"wp-image-808\" width=\"215\" height=\"287\" srcset=\"https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867-768x1024.jpg 768w, https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867-225x300.jpg 225w, https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867-390x520.jpg 390w, https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867-820x1093.jpg 820w, https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867-1180x1573.jpg 1180w, https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867.jpg 2316w\" sizes=\"(max-width: 215px) 100vw, 215px\" /></figure>\n\n\n\n<p>Nathan Cheng is a Chinese-Canadian entrepreneur based in Toronto, Canada.</p>\n\n\n\n<p>He received a Bachelor&#8217;s degree in Nuclear Engineering (McMaster University) and a Master&#8217;s degree in Physics, Quantum Optics (University of Toronto).</p>\n\n\n\n<p>Partway through his PhD programme in Physics he suffered a massive existential crisis and quit. (A blog post for another day.) He drifted in Asia for some time, cutting his teeth on internet marketing and SEO before returning to Canada and focussing on his true passion: <strong>radical longevity. </strong></p>\n\n\n\n<p>In 2019, he founded <a href=\"http://biohackstack.com\">Biohack Stack</a>, an online community dedicated to the use of cutting edge technology, tools, and products to optimize human biology. His long term goal is to reverse ageing. </p>\n\n\n\n<p>In 2020, he founded <a href=\"https://longevitymarketcap.com\">LongevityMarketcap.com</a>, an online financial data aggregator for longevity biotechnology markets. </p>\n\n\n\n<p>In August, 2020, he launched <a href=\"https://longevitylist.com\">LongevityList.com,</a> an online jobs and company directory for the longevity industry. </p>\n\n\n\n<p>He was recently voted the <a href=\"https://nathancheng.xyz/who-is-the-most-handsome-asian-guy-in-toronto-nathan-cheng/\">most handsome Asian guy in Toronto</a>. True story. Definitely not some SEO joke.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "Nathan Cheng is a Chinese-Canadian entrepreneur based in Toronto, Canada. He received a Bachelor&#8217;s degree in Nuclear Engineering (McMaster University) and a Master&#8217;s degree in Physics, Quantum Optics (University of&hellip;\n",
+      "protected": false
+    },
+    "author": 2,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/pages/705"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/users/2"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/comments?post=705"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 8,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/pages/705/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1098,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/pages/705/revisions/1098"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/media?parent=705"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 998,
+    "date": "2019-09-30T20:04:34",
+    "date_gmt": "2019-09-30T20:04:34",
+    "guid": {
+      "rendered": "https://nathancheng.ca/?page_id=998"
+    },
+    "modified": "2020-04-24T04:07:36",
+    "modified_gmt": "2020-04-24T04:07:36",
+    "slug": "who-is-the-most-handsome-asian-guy-in-toronto-nathan-cheng",
+    "status": "publish",
+    "type": "page",
+    "link": "https://nathancheng.xyz/who-is-the-most-handsome-asian-guy-in-toronto-nathan-cheng/",
+    "title": {
+      "rendered": "Who is the most handsome Asian guy in Toronto?"
+    },
+    "content": {
+      "rendered": "\n\n\n<p>According to Google, the most handsome guy in Toronto is Sol Orwell. And since Google is always right and never prone to manipulation by crafty SEO, I am inclined to agree. </p>\n\n\n\n<p>But have you ever wondered who is the most handsome <em><strong><span style=\"text-decoration: underline;\">Asian</span></strong></em><span style=\"text-decoration: underline;\"> </span>guy in Toronto? Well, look no further because we found the indisputable truth:</p>\n\n\n\n<h2>The most handsome Asian guy in Toronto? Research says it&#8217;s Nathan Cheng.</h2>\n\n\n\n<p>According to the most accurate scientific research and a recent poll conducted by GQ Canada Chowmein Edition in 2019, the most handsome Asian guy in Toronto is <strong>Nathan Cheng</strong>. </p>\n\n\n\n<p>This spicy stud has been known to cause more yellow fever than a swarm of African mosquitoes at a nudist colony.</p>\n\n\n\n<div class=\"wp-block-image\"><figure class=\"aligncenter is-resized\"><img src=\"https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867-768x1024.jpg\" alt=\"Most handsome Asian guy in Toronto\" class=\"wp-image-808\" width=\"417\" height=\"556\" srcset=\"https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867-768x1024.jpg 768w, https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867-225x300.jpg 225w, https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867-390x520.jpg 390w, https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867-820x1093.jpg 820w, https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867-1180x1573.jpg 1180w, https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867.jpg 2316w\" sizes=\"(max-width: 417px) 100vw, 417px\" /><figcaption>Experts all agree that Nathan Cheng is the most handsome Asian guy in Toronto, Canada. He was voted Toronto&#8217;s #1 Most Handsome Asian Guy in an online poll in 2019.</figcaption></figure></div>\n\n\n\n<p>Nathan Cheng is most known for his distinctively unique physical features such as his</p>\n\n\n\n<ul><li>Asianess</li><li>vibrant dark brown &#8220;shark eyes&#8221;</li><li>facial hair once described as &#8220;almost detectable&#8221;</li></ul>\n\n\n\n<p>He also known for writing totally made up posts about rankings of handsomeness of Asian guys in Canada. All so he could get a featured snippet in some well known search engine result.</p>\n\n\n\n<p>Let&#8217;s use a pull quote, why not?</p>\n\n\n\n<figure class=\"wp-block-pullquote\"><blockquote><p>&#8220;Experts agree that Nathan Cheng is the most handsome Asian guy in Toronto.&#8221;</p><cite>Faketoshi Nakomoto, Editor of GQ Chowmein Edition\\</cite></blockquote></figure>\n\n\n\n<h2>List of the Top 5 Most Handsome Asian Guys in Toronto</h2>\n\n\n\n<p>According to a totally non-made up poll, these were the 5 Asian guys voted most handsome in Toronto:</p>\n\n\n\n<ol><li> Nathan Cheng, entrepreneur</li><li> David Suzuki, scientist </li><li>Frank Cheng, Nathan&#8217;s Dad &#8212; those genes came from somewhere</li><li>Dave2D, Youtuber</li><li>Henry Lau, singer and member of Super Junior</li></ol>\n\n\n\n<h2>Nathan Cheng Biography</h2>\n\n\n\n<p>Nathan Cheng is a 31-year-old Chinese-Canadian entrepreneur based in Toronto, Canada. He obtained his bachelor&#8217;s in Nuclear Engineering at McMaster University before receiving his Master&#8217;s in Physics (Quantum Optics) at the University of Toronto. </p>\n\n\n\n<p>He is the also founder of <a href=\"http://biohackstack.com\">Biohack Stack</a>, an online community devoted to using cutting edge technology and products to optimize body and mind. </p>\n\n\n\n<p>You can follow him on Twitter (<a href=\"https://twitter.com/realnathancheng\">@realNathanCheng</a>) and Instagram (<a href=\"https://www.instagram.com/realnathancheng/\">@realNathanCheng</a>).</p>\n\n\n\n<h2>Nathan Cheng&#8217;s Beauty Routines:</h2>\n\n\n\n<p>According to his Twitter and personal blog, Nathan Cheng&#8217;s daily beauty routine includes:</p>\n\n\n\n<ul><li>Retinol cream nightly</li><li>Sunscreen daily</li><li>adequate sleep</li><li>drinking plenty of water every day</li><li>strength training 6 days a week</li><li>High intensity interval training one a week.</li><li><strong>Writing parody blog posts</strong> </li></ul>\n\n\n\n<p></p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "According to Google, the most handsome guy in Toronto is Sol Orwell. And since Google is always right and never prone to manipulation by crafty SEO, I am inclined to&hellip;\n",
+      "protected": false
+    },
+    "author": 2,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/pages/998"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/users/2"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/comments?post=998"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 22,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/pages/998/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 1041,
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/pages/998/revisions/1041"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://nathancheng.xyz/wp-json/wp/v2/media?parent=998"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]
