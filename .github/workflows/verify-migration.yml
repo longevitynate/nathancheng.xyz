@@ -25,6 +25,8 @@ jobs:
           /tmp/nathan-migration-tools/bin/python -m pip install --index-url https://pypi.org/simple --only-binary=:all: Pillow==13.0.0 fonttools==4.67.0
       - name: Rebuild selected assets and verify the complete static site
         run: /tmp/nathan-migration-tools/bin/python cloud_verify.py
+      - name: Check published personal site bytes
+        run: /tmp/nathan-migration-tools/bin/python verify_live.py
       - name: Save verified site
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
