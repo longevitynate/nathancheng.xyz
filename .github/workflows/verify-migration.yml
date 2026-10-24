@@ -1,0 +1,34 @@
+name: Verify personal site migration
+on:
+  push:
+    branches: [restore-original-design]
+    paths:
+      - '**.py'
+      - 'assets/**'
+      - '.github/workflows/verify-migration.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install image and font parsers from PyPI
+        run: |
+          python3 -m venv /tmp/nathan-migration-tools
+          /tmp/nathan-migration-tools/bin/python -m pip install --index-url https://pypi.org/simple --only-binary=:all: Pillow fonttools
+      - name: Rebuild selected assets and verify the complete static site
+        run: /tmp/nathan-migration-tools/bin/python cloud_verify.py
+      - name: Save verified site
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: verified-nathancheng-static-site
+          path: |
+            docs/
+            source/asset-audit.json
+            verification.json
+          include-hidden-files: true
+          retention-days: 7
