@@ -1,55 +1,38 @@
-# Original design restoration: draft checkpoint
+# Design migration validation
 
-This branch contains prepared source changes, not a completed deployment. Do not merge or publish until the checks below pass. The production main branch and generated docs/ files were not changed.
+The design restoration includes all 13 sitemap routes, all six original content bodies, the homepage introduction, original portraits, author sidebar, category cards, navigation, tables of contents, and footer. The generated docs/ directory is portable and contains no PHP or WordPress runtime.
 
-## Completed
+## Passed
 
-- Read the original homepage and About page in the browser at a 1512px desktop viewport.
-- Measured the original Expertly theme rather than importing its PHP, JavaScript, plugins, or icon fonts.
-- Prepared templates and CSS for the header, Categories menu, blue portrait hero, search, white article panels, author sidebar, pink links, archive cards, and footer.
-- Kept the six original content files and source snapshots unchanged.
-- Added a content-tag allowlist, local image substitution, restricted newsletter frame, and content security policy.
-- Prepared a one-time asset reconstruction script. Build refuses to run without its asset audit and matching output hashes.
-- JavaScript passed a syntax parse. CSS braces balance. Python build and browser tests have NOT been run on these changes.
+- Python and JavaScript syntax checks.
+- All six article/page bodies and the homepage match the original public WordPress snapshots after normalizing HTML whitespace only.
+- All 13 live sitemap URLs and all five original child sitemap filenames are preserved.
+- All internal page, script, image, and font references resolve.
+- Three images were checked by signature, content type, size, dimensions, and decoder, then re-encoded from fresh pixels. Embedded color profiles are converted to sRGB before metadata removal.
+- The local serif font was reconstructed from recognized TrueType tables, stripped of hint programs, renamed Nathan Serif, and distributed with the original license.
+- Sanitized asset hashes match the build audit.
+- Content tag/URL allowlists, script-source restrictions, iframe restrictions, Content Security Policy, and unsafe-content rejection cases pass.
+- Stylesheet resources are checked to be local.
 
-## Assets and interrupted work
+The remote verification runs are visible in this repository's Actions tab. source/asset-audit.json records source URLs and input/output hashes. These are structural and reconstruction checks, not a claim that arbitrary input files can be proven malware-free.
 
-The browser exported these three selected files into its temporary asset directory:
+## Visual evidence and remaining check
 
-- Hero: source PNG, 116429 bytes, 700 x 600, RGBA. Pillow format verification passed.
-- Avatar: source PNG, 25975 bytes, 160 x 160, RGBA. Pillow format verification passed.
-- Lora WOFF: exported but not yet parsed or rebuilt.
+The original homepage and About page were inspected in Chrome at a 1512px desktop viewport. The single-post, handsome-guy, category, and Coming Soon page structures were subsequently inspected as inert source HTML and CSS, without running their scripts. The sanitized portrait images were also visually inspected.
 
-The connection dropped during export of the 768 x 1024 About/handsome portrait. Its completion is unknown.
+The completed site's desktop/mobile browser comparison and interactive click-through remain pending because the user's computer/browser disconnected. Automated validation does not substitute for that visual check.
 
-None of these downloaded originals were committed or used in the generated website. No asset reconstruction has completed. Format verification alone is not a malware-free guarantee.
+## Design measurements retained
 
-On the disconnected computer the first export directory was:
-    /var/folders/nj/x6ykcmbd5f7f6r86sn_7l6640000gp/T/browser-use/assets/210fbc6c-7ad1-4509-81ce-0c27781974d2
+- White header: 60px high; content shell maximum 1340px.
+- Brand: system sans, 20px bold. Tagline: 15px, faded gray.
+- Background #f8f8f8; text #121416; links #d641b4.
+- Homepage hero: two equal columns, padded portrait, 52px heading, 20px/30px description.
+- Desktop content: 980px article panel, 60px gap, 300px sidebar at 1512px viewport.
+- Article: 80px desktop padding, 40px title, 17px/29.75px serif body. Post body maximum 670px.
+- About and handsome pages use the full article interior width. Original image display dimensions and captions are retained.
+- Author card: 24px padding and an 80px circular portrait.
+- Category landing pages preserve the original featured cards and their original "0 posts" empty-archive wording.
+- Footer: white, 48px padding, original 2021 copyright text.
 
-Filenames: hero c5cdc7d6c6cc191e.png, avatar 4b00583f9f891bf8, font 1dd3adb430b0a644.woff.
-The original local project is /Users/nathan/Documents/ai-playground/nathancheng-personal-site.
-A pip installation of fonttools into /tmp/nathan-site-fonttools was started, but its outcome is unknown.
-
-## Finish before publishing
-
-1. Recover the selected downloads or obtain those same specific assets again. Inspect the actual images.
-2. Run prepare_assets.py with explicit local paths. It limits file sizes and dimensions, reconstructs pixels without original metadata, rebuilds the Lora TrueType tables without hint programs, and records input/output SHA256 hashes. Inspect font licensing metadata and preserve applicable notices.
-3. Run Python syntax checks, build.py, and verify.py. Review all six normalized content hashes against the original snapshots and all 13 sitemap routes.
-4. Compare the original single-post, handsome, archive, and Coming Soon layouts. Their full visual layouts still need inspection. Adjust the draft templates as required; do not claim a complete design match based only on homepage/About evidence.
-5. Test desktop and mobile navigation, search on nested URLs and the project-path deployment, local image/font loading, newsletter display, and browser console. Capture screenshots and refine spacing.
-6. Regenerate docs/, inspect the complete diff, publish to the personal main branch, and verify GitHub Pages deployment.
-7. Leave nathancheng.xyz DNS and the old WordPress host unchanged until the separate domain cutover.
-
-## Measured desktop design
-
-- Header: 60px high, white; shell max width 1340px.
-- Brand: system sans, 20px bold. Tagline 15px, faded gray.
-- Body background: #f8f8f8. Main text #121416, links #d641b4.
-- Homepage hero: 50/50 columns. Padded portrait image expands to column width; image supplies its white spacing.
-- Hero heading: 52px / 62.4px, bold system sans. Description 20px / 30px.
-- Main content: top margin 48px; 980px article panel, 60px gap, 300px sidebar at 1512px viewport.
-- Article panel: 80px padding. Heading 40px / 40px bold sans.
-- Article body: Lora 17px / 29.75px; paragraphs bottom margin 32px. Post body max width 670px. About body uses the panel's 820px interior width.
-- Author card: white, 24px padding, 80px circular avatar; body text 14px / 22px with 188px text width.
-- Footer: white, 48px padding; original copyright text preserved.
+The old WordPress server and custom-domain DNS remain unchanged. Everything is hosted in Nathan's personal GitHub repository and uses no Less Death infrastructure.

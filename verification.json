@@ -41,7 +41,8 @@
   ],
   "homepage_matches_source": true,
   "published_comments": 0,
-  "images_omitted": true,
+  "images_omitted": false,
+  "assets_sanitized": true,
   "routes": [
     "/",
     "/about-me/",

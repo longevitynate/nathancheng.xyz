@@ -1,6 +1,5 @@
 # Nathan Cheng's personal website
 
-> Design restoration draft: source changes on this branch are not published or fully tested. See `DESIGN-MIGRATION.md` for the remaining asset and browser checks. `docs/` still contains the last published text-only build.
 
 Portable static replacement for https://nathancheng.xyz, hosted in Nathan's personal GitHub account. No Less Death hosting, billing, databases, or credentials are used.
 
@@ -22,7 +21,17 @@ The public WordPress REST API was captured on October 24, 2026. All 3 published 
 
 Six author/category/tag archives, local full-text search, XML sitemaps, and a new RSS file are included. A live sitemap audit on October 24, 2026 found 13 unique URLs across all 5 child sitemaps, including the empty `/author/admin/` archive. All 13 are present, and the original sitemap index and child sitemap URLs are preserved. `source/sitemap-audit.json` records this inventory. `verification.json` records hashes of normalized text (only HTML whitespace is normalized). The original API responses are retained in `source/` for audit and backup; they contain only publicly returned data.
 
-The published baseline is text-only. This branch prepares the original layout, local portraits, and Lora article font. Run `prepare_assets.py` with the inspected local asset paths before building; it requires Pillow and fonttools only for this one-time preparation. Captions and article wording remain unchanged. There were zero public comments. WordPress administration, comment submission, share counters, and theme scripts are not part of the static site. RSS is now at `/feed.xml`; `/feed/` contains a browser redirect, which some RSS readers will not follow. Existing RSS subscribers should use `/feed.xml`.
+The original design is recreated with a white header, portrait hero, local serif article font, pink links, article panels, author sidebar, category cards, table-of-contents navigation, mobile menu, and footer. Portraits are included on the homepage, About page, and handsome-guy page. Captions and article wording remain unchanged. There were zero public comments. WordPress administration, comment submission, share counters, and theme scripts are not part of the static site. RSS is now at `/feed.xml`; `/feed/` contains a browser redirect, which some RSS readers will not follow. Existing RSS subscribers should use `/feed.xml`.
+
+## Asset preparation and validation
+
+The published files contain three reconstructed raster images and a rebuilt local font. Image formats, dimensions, and size limits were checked; any embedded color profile is converted to sRGB before pixels are re-encoded without the original metadata. The Lora-derived font is rebuilt without hint programs and renamed Nathan Serif under the included SIL Open Font License. Input and output SHA256 hashes are recorded in `source/asset-audit.json`.
+
+The article renderer allows a limited set of tags and links, rejects script/event-handler markup, substitutes local images, and restricts the existing newsletter iframe. The site adds a Content Security Policy and uses only the two small, locally served JavaScript files. No WordPress theme/plugin executable code is imported.
+
+The committed assets are ready to use. Only if replacing them from original downloads, run `prepare_assets.py` with explicit local paths. That one-time preparation needs Pillow and fonttools. The normal site build uses Python's standard library only. GitHub Actions checks the generated documents, original-text hashes, internal links, sitemap inventory, allowed scripts, local CSS resources, and audited asset hashes.
+
+The original homepage and About page were visually inspected before implementation; the other page structures were checked from inert HTML/CSS. Final desktop/mobile browser comparison remains pending because the connected browser became unavailable. See `DESIGN-MIGRATION.md` for the validation record.
 
 ## Point nathancheng.xyz at this site
 

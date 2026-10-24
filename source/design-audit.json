@@ -1,0 +1,1073 @@
+{
+  "captured": "2026-10-24",
+  "origin": "https://nathancheng.xyz",
+  "pages": [
+    {
+      "path": "/about-me/",
+      "structure": [
+        {
+          "body": "post-template-default single single-post postid-1111 single-format-standard wp-embed-responsive sidebar-enabled sidebar-right headings-large navbar-sticky-enabled navbar-smart-enabled sticky-sidebar-enabled stick-last post-sidebar-enabled block-align-enabled"
+        },
+        {
+          "node": "div.site-content",
+          "parents": [
+            "html",
+            "body.post-template-default.single.single-post.postid-1111.single-format-standard.wp-embed-responsive.sidebar-enabled.sidebar-right.headings-large.navbar-sticky-enabled.navbar-smart-enabled.sticky-sidebar-enabled.stick-last.post-sidebar-enabled.block-align-enabled",
+            "div#page.site",
+            "div.site-inner"
+          ]
+        },
+        {
+          "node": "div#primary.content-area",
+          "parents": [
+            "div#page.site",
+            "div.site-inner",
+            "div.site-content",
+            "div.cs-container",
+            "div#content.main-content"
+          ]
+        },
+        {
+          "node": "main#main.site-main",
+          "parents": [
+            "div.site-inner",
+            "div.site-content",
+            "div.cs-container",
+            "div#content.main-content",
+            "div#primary.content-area"
+          ]
+        },
+        {
+          "node": "header.entry-header.entry-single-header.",
+          "parents": [
+            "div.cs-container",
+            "div#content.main-content",
+            "div#primary.content-area",
+            "main#main.site-main",
+            "article#post-1111.entry.post-1111.post.type-post.status-publish.format-standard.category-uncategorized"
+          ]
+        },
+        {
+          "node": "h1.entry-title",
+          "parents": [
+            "div#content.main-content",
+            "div#primary.content-area",
+            "main#main.site-main",
+            "article#post-1111.entry.post-1111.post.type-post.status-publish.format-standard.category-uncategorized",
+            "header.entry-header.entry-single-header."
+          ]
+        },
+        {
+          "node": "div.entry-container",
+          "parents": [
+            "div.cs-container",
+            "div#content.main-content",
+            "div#primary.content-area",
+            "main#main.site-main",
+            "article#post-1111.entry.post-1111.post.type-post.status-publish.format-standard.category-uncategorized"
+          ]
+        },
+        {
+          "node": "div.entry-content-wrap",
+          "parents": [
+            "div#content.main-content",
+            "div#primary.content-area",
+            "main#main.site-main",
+            "article#post-1111.entry.post-1111.post.type-post.status-publish.format-standard.category-uncategorized",
+            "div.entry-container"
+          ]
+        },
+        {
+          "node": "div.entry-content",
+          "parents": [
+            "div#primary.content-area",
+            "main#main.site-main",
+            "article#post-1111.entry.post-1111.post.type-post.status-publish.format-standard.category-uncategorized",
+            "div.entry-container",
+            "div.entry-content-wrap"
+          ]
+        },
+        {
+          "node": "h6.entry-title",
+          "parents": [
+            "ul",
+            "li.pk-post-item",
+            "article.post-1111.post.type-post.status-publish.format-standard.category-uncategorized",
+            "div.pk-post-outer",
+            "div.pk-post-inner.pk-post-data"
+          ]
+        },
+        {
+          "node": "h6.entry-title",
+          "parents": [
+            "ul",
+            "li.pk-post-item",
+            "article.post-973.post.type-post.status-publish.format-standard.category-learning.tag-accelerated-learning.tag-molecular-biology-of-the-cell",
+            "div.pk-post-outer",
+            "div.pk-post-inner.pk-post-data"
+          ]
+        },
+        {
+          "node": "h6.entry-title",
+          "parents": [
+            "ul",
+            "li.pk-post-item",
+            "article.post-927.post.type-post.status-publish.format-standard.category-learning",
+            "div.pk-post-outer",
+            "div.pk-post-inner.pk-post-data"
+          ]
+        }
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "class": "entry-title",
+          "text": "About me, and some of my work."
+        },
+        {
+          "tag": "h4",
+          "class": "",
+          "text": "My Longevity Biotech Investing Newsletter:"
+        },
+        {
+          "tag": "h5",
+          "class": "title-author",
+          "text": "\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\tNathan Cheng\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t"
+        },
+        {
+          "tag": "h5",
+          "class": "title-block title-comment-reply",
+          "text": "Leave a Reply Cancel reply"
+        },
+        {
+          "tag": "h5",
+          "class": "title-block title-widget",
+          "text": "Author"
+        },
+        {
+          "tag": "h5",
+          "class": "pk-author-title",
+          "text": "\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tNathan Cheng\t\t\t\t\t\t\n\t\t\t\t\t"
+        },
+        {
+          "tag": "h5",
+          "class": "title-block title-widget",
+          "text": "Featured Posts"
+        },
+        {
+          "tag": "h6",
+          "class": "entry-title",
+          "text": "\n\t\t\t\t\tAbout me, and some of my work.\n\t\t\t\t"
+        },
+        {
+          "tag": "h6",
+          "class": "entry-title",
+          "text": "\n\t\t\t\t\tDay 1: Molecular Biology of the Cell Chapter 1 -Cells and Genomes.\n\t\t\t\t"
+        },
+        {
+          "tag": "h6",
+          "class": "entry-title",
+          "text": "\n\t\t\t\t\tRide along: Compressing a biology undergrad into 1 year.\n\t\t\t\t"
+        },
+        {
+          "tag": "h5",
+          "class": "title-block title-widget",
+          "text": "Twitter"
+        },
+        {
+          "tag": "h5",
+          "class": "site-title footer-title",
+          "text": "Nathan Cheng"
+        }
+      ]
+    },
+    {
+      "path": "/who-is-the-most-handsome-asian-guy-in-toronto-nathan-cheng/",
+      "structure": [
+        {
+          "body": "page-template-default page page-id-998 wp-embed-responsive sidebar-enabled sidebar-right headings-large navbar-sticky-enabled navbar-smart-enabled sticky-sidebar-enabled stick-last post-sidebar-disabled block-page-align-enabled"
+        },
+        {
+          "node": "div.site-content",
+          "parents": [
+            "html",
+            "body.page-template-default.page.page-id-998.wp-embed-responsive.sidebar-enabled.sidebar-right.headings-large.navbar-sticky-enabled.navbar-smart-enabled.sticky-sidebar-enabled.stick-last.post-sidebar-disabled.block-page-align-enabled",
+            "div#page.site",
+            "div.site-inner"
+          ]
+        },
+        {
+          "node": "div#primary.content-area",
+          "parents": [
+            "div#page.site",
+            "div.site-inner",
+            "div.site-content",
+            "div.cs-container",
+            "div#content.main-content"
+          ]
+        },
+        {
+          "node": "main#main.site-main",
+          "parents": [
+            "div.site-inner",
+            "div.site-content",
+            "div.cs-container",
+            "div#content.main-content",
+            "div#primary.content-area"
+          ]
+        },
+        {
+          "node": "header.entry-header.entry-single-header.",
+          "parents": [
+            "div.cs-container",
+            "div#content.main-content",
+            "div#primary.content-area",
+            "main#main.site-main",
+            "article#post-998.entry.post-998.page.type-page.status-publish"
+          ]
+        },
+        {
+          "node": "h1.entry-title",
+          "parents": [
+            "div#content.main-content",
+            "div#primary.content-area",
+            "main#main.site-main",
+            "article#post-998.entry.post-998.page.type-page.status-publish",
+            "header.entry-header.entry-single-header."
+          ]
+        },
+        {
+          "node": "div.entry-content-wrap",
+          "parents": [
+            "div.cs-container",
+            "div#content.main-content",
+            "div#primary.content-area",
+            "main#main.site-main",
+            "article#post-998.entry.post-998.page.type-page.status-publish"
+          ]
+        },
+        {
+          "node": "div.entry-content",
+          "parents": [
+            "div#content.main-content",
+            "div#primary.content-area",
+            "main#main.site-main",
+            "article#post-998.entry.post-998.page.type-page.status-publish",
+            "div.entry-content-wrap"
+          ]
+        },
+        {
+          "node": "h6.entry-title",
+          "parents": [
+            "ul",
+            "li.pk-post-item",
+            "article.post-1111.post.type-post.status-publish.format-standard.category-uncategorized",
+            "div.pk-post-outer",
+            "div.pk-post-inner.pk-post-data"
+          ]
+        },
+        {
+          "node": "h6.entry-title",
+          "parents": [
+            "ul",
+            "li.pk-post-item",
+            "article.post-973.post.type-post.status-publish.format-standard.category-learning.tag-accelerated-learning.tag-molecular-biology-of-the-cell",
+            "div.pk-post-outer",
+            "div.pk-post-inner.pk-post-data"
+          ]
+        },
+        {
+          "node": "h6.entry-title",
+          "parents": [
+            "ul",
+            "li.pk-post-item",
+            "article.post-927.post.type-post.status-publish.format-standard.category-learning",
+            "div.pk-post-outer",
+            "div.pk-post-inner.pk-post-data"
+          ]
+        }
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "class": "entry-title",
+          "text": "Who is the most handsome Asian guy in Toronto?"
+        },
+        {
+          "tag": "h5",
+          "class": "pk-title pk-toc-title pk-font-block",
+          "text": "\n\t\t\t\t\t\tTable of Contents\t\t\t\t\t"
+        },
+        {
+          "tag": "h2",
+          "class": "",
+          "text": "The most handsome Asian guy in Toronto? Research says it’s Nathan Cheng."
+        },
+        {
+          "tag": "h2",
+          "class": "",
+          "text": "List of the Top 5 Most Handsome Asian Guys in Toronto"
+        },
+        {
+          "tag": "h2",
+          "class": "",
+          "text": "Nathan Cheng Biography"
+        },
+        {
+          "tag": "h2",
+          "class": "",
+          "text": "Nathan Cheng’s Beauty Routines:"
+        },
+        {
+          "tag": "h5",
+          "class": "title-block title-widget",
+          "text": "Author"
+        },
+        {
+          "tag": "h5",
+          "class": "pk-author-title",
+          "text": "\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tNathan Cheng\t\t\t\t\t\t\n\t\t\t\t\t"
+        },
+        {
+          "tag": "h5",
+          "class": "title-block title-widget",
+          "text": "Featured Posts"
+        },
+        {
+          "tag": "h6",
+          "class": "entry-title",
+          "text": "\n\t\t\t\t\tAbout me, and some of my work.\n\t\t\t\t"
+        },
+        {
+          "tag": "h6",
+          "class": "entry-title",
+          "text": "\n\t\t\t\t\tDay 1: Molecular Biology of the Cell Chapter 1 -Cells and Genomes.\n\t\t\t\t"
+        },
+        {
+          "tag": "h6",
+          "class": "entry-title",
+          "text": "\n\t\t\t\t\tRide along: Compressing a biology undergrad into 1 year.\n\t\t\t\t"
+        },
+        {
+          "tag": "h5",
+          "class": "title-block title-widget",
+          "text": "Twitter"
+        },
+        {
+          "tag": "h5",
+          "class": "site-title footer-title",
+          "text": "Nathan Cheng"
+        }
+      ]
+    },
+    {
+      "path": "/category/learning/",
+      "structure": [
+        {
+          "body": "archive category category-learning category-11 wp-embed-responsive sidebar-enabled sidebar-right headings-large navbar-sticky-enabled navbar-smart-enabled sticky-sidebar-enabled stick-last post-sidebar-disabled block-align-enabled"
+        },
+        {
+          "node": "div.site-content",
+          "parents": [
+            "html",
+            "body.archive.category.category-learning.category-11.wp-embed-responsive.sidebar-enabled.sidebar-right.headings-large.navbar-sticky-enabled.navbar-smart-enabled.sticky-sidebar-enabled.stick-last.post-sidebar-disabled.block-align-enabled",
+            "div#page.site",
+            "div.site-inner"
+          ]
+        },
+        {
+          "node": "div#primary.content-area",
+          "parents": [
+            "div#page.site",
+            "div.site-inner",
+            "div.site-content",
+            "div.cs-container",
+            "div#content.main-content"
+          ]
+        },
+        {
+          "node": "main#main.site-main",
+          "parents": [
+            "div.site-inner",
+            "div.site-content",
+            "div.cs-container",
+            "div#content.main-content",
+            "div#primary.content-area"
+          ]
+        },
+        {
+          "node": "h2.entry-title",
+          "parents": [
+            "div.cs-category-posts",
+            "div.cs-category-post",
+            "article.post-973.post.type-post.status-publish.format-standard.category-learning.tag-accelerated-learning.tag-molecular-biology-of-the-cell",
+            "div.cs-overlay.cs-overlay-ratio.cs-ratio-landscape.cs-ratio-16by9.cs-bg-dark",
+            "div.cs-overlay-content"
+          ]
+        },
+        {
+          "node": "h2.h5.entry-title",
+          "parents": [
+            "section.section-category-posts",
+            "div.cs-category-posts",
+            "div.cs-category-post",
+            "article.post-927.post.type-post.status-publish.format-standard.category-learning",
+            "div.cs-card"
+          ]
+        },
+        {
+          "node": "header.page-header.",
+          "parents": [
+            "div.site-content",
+            "div.cs-container",
+            "div#content.main-content",
+            "div#primary.content-area",
+            "main#main.site-main"
+          ]
+        },
+        {
+          "node": "div.entry-content.content-not-found",
+          "parents": [
+            "div.site-content",
+            "div.cs-container",
+            "div#content.main-content",
+            "div#primary.content-area",
+            "main#main.site-main"
+          ]
+        },
+        {
+          "node": "h6.entry-title",
+          "parents": [
+            "ul",
+            "li.pk-post-item",
+            "article.post-1111.post.type-post.status-publish.format-standard.category-uncategorized",
+            "div.pk-post-outer",
+            "div.pk-post-inner.pk-post-data"
+          ]
+        },
+        {
+          "node": "h6.entry-title",
+          "parents": [
+            "ul",
+            "li.pk-post-item",
+            "article.post-973.post.type-post.status-publish.format-standard.category-learning.tag-accelerated-learning.tag-molecular-biology-of-the-cell",
+            "div.pk-post-outer",
+            "div.pk-post-inner.pk-post-data"
+          ]
+        },
+        {
+          "node": "h6.entry-title",
+          "parents": [
+            "ul",
+            "li.pk-post-item",
+            "article.post-927.post.type-post.status-publish.format-standard.category-learning",
+            "div.pk-post-outer",
+            "div.pk-post-inner.pk-post-data"
+          ]
+        }
+      ],
+      "headings": [
+        {
+          "tag": "h2",
+          "class": "entry-title",
+          "text": "Day 1: Molecular Biology of the Cell Chapter 1 -Cells and Genomes."
+        },
+        {
+          "tag": "h2",
+          "class": "h5 entry-title",
+          "text": "\r\n\t\t\t\t\t\t\t\t\tRide along: Compressing a biology undergrad into 1 year.\r\n\t\t\t\t\t\t\t\t"
+        },
+        {
+          "tag": "h1",
+          "class": "page-title",
+          "text": "Learning"
+        },
+        {
+          "tag": "h5",
+          "class": "title-block title-widget",
+          "text": "Author"
+        },
+        {
+          "tag": "h5",
+          "class": "pk-author-title",
+          "text": "\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tNathan Cheng\t\t\t\t\t\t\n\t\t\t\t\t"
+        },
+        {
+          "tag": "h5",
+          "class": "title-block title-widget",
+          "text": "Featured Posts"
+        },
+        {
+          "tag": "h6",
+          "class": "entry-title",
+          "text": "\n\t\t\t\t\tAbout me, and some of my work.\n\t\t\t\t"
+        },
+        {
+          "tag": "h6",
+          "class": "entry-title",
+          "text": "\n\t\t\t\t\tDay 1: Molecular Biology of the Cell Chapter 1 -Cells and Genomes.\n\t\t\t\t"
+        },
+        {
+          "tag": "h6",
+          "class": "entry-title",
+          "text": "\n\t\t\t\t\tRide along: Compressing a biology undergrad into 1 year.\n\t\t\t\t"
+        },
+        {
+          "tag": "h5",
+          "class": "title-block title-widget",
+          "text": "Twitter"
+        },
+        {
+          "tag": "h5",
+          "class": "site-title footer-title",
+          "text": "Nathan Cheng"
+        }
+      ]
+    },
+    {
+      "path": "/coming-soon/",
+      "structure": [
+        {
+          "body": "page-template-default page page-id-1066 wp-embed-responsive sidebar-enabled sidebar-right headings-large navbar-sticky-enabled navbar-smart-enabled sticky-sidebar-enabled stick-last post-sidebar-disabled block-page-align-enabled"
+        },
+        {
+          "node": "div.site-content",
+          "parents": [
+            "html",
+            "body.page-template-default.page.page-id-1066.wp-embed-responsive.sidebar-enabled.sidebar-right.headings-large.navbar-sticky-enabled.navbar-smart-enabled.sticky-sidebar-enabled.stick-last.post-sidebar-disabled.block-page-align-enabled",
+            "div#page.site",
+            "div.site-inner"
+          ]
+        },
+        {
+          "node": "div#primary.content-area",
+          "parents": [
+            "div#page.site",
+            "div.site-inner",
+            "div.site-content",
+            "div.cs-container",
+            "div#content.main-content"
+          ]
+        },
+        {
+          "node": "main#main.site-main",
+          "parents": [
+            "div.site-inner",
+            "div.site-content",
+            "div.cs-container",
+            "div#content.main-content",
+            "div#primary.content-area"
+          ]
+        },
+        {
+          "node": "header.entry-header.entry-single-header.",
+          "parents": [
+            "div.cs-container",
+            "div#content.main-content",
+            "div#primary.content-area",
+            "main#main.site-main",
+            "article#post-1066.entry.post-1066.page.type-page.status-publish"
+          ]
+        },
+        {
+          "node": "h1.entry-title",
+          "parents": [
+            "div#content.main-content",
+            "div#primary.content-area",
+            "main#main.site-main",
+            "article#post-1066.entry.post-1066.page.type-page.status-publish",
+            "header.entry-header.entry-single-header."
+          ]
+        },
+        {
+          "node": "div.entry-content-wrap",
+          "parents": [
+            "div.cs-container",
+            "div#content.main-content",
+            "div#primary.content-area",
+            "main#main.site-main",
+            "article#post-1066.entry.post-1066.page.type-page.status-publish"
+          ]
+        },
+        {
+          "node": "div.entry-content",
+          "parents": [
+            "div#content.main-content",
+            "div#primary.content-area",
+            "main#main.site-main",
+            "article#post-1066.entry.post-1066.page.type-page.status-publish",
+            "div.entry-content-wrap"
+          ]
+        },
+        {
+          "node": "h6.entry-title",
+          "parents": [
+            "ul",
+            "li.pk-post-item",
+            "article.post-1111.post.type-post.status-publish.format-standard.category-uncategorized",
+            "div.pk-post-outer",
+            "div.pk-post-inner.pk-post-data"
+          ]
+        },
+        {
+          "node": "h6.entry-title",
+          "parents": [
+            "ul",
+            "li.pk-post-item",
+            "article.post-973.post.type-post.status-publish.format-standard.category-learning.tag-accelerated-learning.tag-molecular-biology-of-the-cell",
+            "div.pk-post-outer",
+            "div.pk-post-inner.pk-post-data"
+          ]
+        },
+        {
+          "node": "h6.entry-title",
+          "parents": [
+            "ul",
+            "li.pk-post-item",
+            "article.post-927.post.type-post.status-publish.format-standard.category-learning",
+            "div.pk-post-outer",
+            "div.pk-post-inner.pk-post-data"
+          ]
+        }
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "class": "entry-title",
+          "text": "Coming Soon"
+        },
+        {
+          "tag": "h1",
+          "class": "has-text-align-center",
+          "text": "I’m working on something amazing!But don’t worry, I’ll back soon. "
+        },
+        {
+          "tag": "h5",
+          "class": "title-block title-widget",
+          "text": "Author"
+        },
+        {
+          "tag": "h5",
+          "class": "pk-author-title",
+          "text": "\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tNathan Cheng\t\t\t\t\t\t\n\t\t\t\t\t"
+        },
+        {
+          "tag": "h5",
+          "class": "title-block title-widget",
+          "text": "Featured Posts"
+        },
+        {
+          "tag": "h6",
+          "class": "entry-title",
+          "text": "\n\t\t\t\t\tAbout me, and some of my work.\n\t\t\t\t"
+        },
+        {
+          "tag": "h6",
+          "class": "entry-title",
+          "text": "\n\t\t\t\t\tDay 1: Molecular Biology of the Cell Chapter 1 -Cells and Genomes.\n\t\t\t\t"
+        },
+        {
+          "tag": "h6",
+          "class": "entry-title",
+          "text": "\n\t\t\t\t\tRide along: Compressing a biology undergrad into 1 year.\n\t\t\t\t"
+        },
+        {
+          "tag": "h5",
+          "class": "title-block title-widget",
+          "text": "Twitter"
+        },
+        {
+          "tag": "h5",
+          "class": "site-title footer-title",
+          "text": "Nathan Cheng"
+        }
+      ]
+    }
+  ],
+  "selected_theme_rules": [
+    {
+      "selector": ".entry-header .entry-title",
+      "rules": "line-height: 1;"
+    },
+    {
+      "selector": ".entry-header .post-excerpt",
+      "rules": "font-size: 1.25rem;"
+    },
+    {
+      "selector": ".headings-large h1, .headings-large .h1",
+      "rules": "font-size: 3.25rem;"
+    },
+    {
+      "selector": ".headings-large h2, .headings-large .h2",
+      "rules": "font-size: 2.5rem;"
+    },
+    {
+      "selector": ".headings-large h3, .headings-large .h3",
+      "rules": "font-size: 2rem;"
+    },
+    {
+      "selector": ".headings-large .post-archive .entry-title",
+      "rules": "font-size: 2rem;"
+    },
+    {
+      "selector": ".headings-large .post-archive .archive-full .entry-title",
+      "rules": "font-size: 2.5rem;"
+    },
+    {
+      "selector": ".headings-large .cs-homepage-post:first-child .entry-title",
+      "rules": "font-size: 2.5rem;"
+    },
+    {
+      "selector": ".headings-large .cs-homepage-post:not(:first-child) .entry-title",
+      "rules": "font-size: 1.5rem;"
+    },
+    {
+      "selector": ".headings-large .cs-homepage-category > article .entry-title",
+      "rules": "font-size: 1.75rem;"
+    },
+    {
+      "selector": ".headings-large .cs-card .entry-title",
+      "rules": "font-size: 1.5rem;"
+    },
+    {
+      "selector": ".cs-bg-dark.navbar-primary .cs-mega-menu .entry-header .entry-title",
+      "rules": "color: #A0A0A0;"
+    },
+    {
+      "selector": ".cs-bg-dark.navbar-primary .cs-mega-menu .entry-header .entry-title a",
+      "rules": "color: #000000;"
+    },
+    {
+      "selector": ".cs-bg-dark.navbar-primary .cs-mega-menu .entry-header .entry-title a:hover, .cs-bg-dark.navbar-primary .cs-mega-menu .entry-header .entry-title a:focus",
+      "rules": "color: #A0A0A0;"
+    },
+    {
+      "selector": ".cs-bg-dark.navbar-primary .cs-mega-menu .entry-header .post-meta",
+      "rules": "color: #A0A0A0;"
+    },
+    {
+      "selector": ".cs-bg-dark.navbar-primary .cs-mega-menu .entry-header .post-meta li > a,\n.cs-bg-dark.navbar-primary .cs-mega-menu .entry-header .post-meta li > span > a",
+      "rules": "color: #000000;"
+    },
+    {
+      "selector": ".cs-bg-dark.navbar-primary .cs-mega-menu .entry-header .post-meta li > a:hover, .cs-bg-dark.navbar-primary .cs-mega-menu .entry-header .post-meta li > a:focus,\n.cs-bg-dark.navbar-primary .cs-mega-menu .entry-header .post-meta li > span > a:hover,\n.cs-bg-dark.navbar-primary .cs-mega-menu .entry-header .post-meta li > span > a:focus",
+      "rules": "color: #A0A0A0;"
+    },
+    {
+      "selector": ".content-area",
+      "rules": "position: relative;\n\t\twidth: 100%;\n\t\tpadding-right: 20px;\n\t\tpadding-left: 20px;\n\t\t-webkit-box-flex: 0;\n\t\t-ms-flex: 0 0 100%;\n\t\tflex: 0 0 100%;\n\t\tmax-width: 100%;"
+    },
+    {
+      "selector": ".sidebar-right .content-area,\n\t.sidebar-left .content-area",
+      "rules": "-webkit-box-flex: 0;\n\t\t-ms-flex: 0 0 calc(100% - 340px);\n\t\tflex: 0 0 calc(100% - 340px);\n\t\tmax-width: calc(100% - 340px);"
+    },
+    {
+      "selector": ".sidebar-right .content-area",
+      "rules": "padding-right: 40px;"
+    },
+    {
+      "selector": ".sidebar-left .content-area",
+      "rules": "padding-left: 40px;"
+    },
+    {
+      "selector": ".archive-masonry .cs-overlay-content",
+      "rules": "position: absolute;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-ms-flex-direction: column;\n\tflex-direction: column;\n\t-webkit-box-pack: end;\n\t-ms-flex-pack: end;\n\tjustify-content: flex-end;\n\twidth: 100%;\n\tmin-height: 100%;\n\ttop: 0;\n\tleft: 0;"
+    },
+    {
+      "selector": ".single .site-main .entry, .page .site-main .entry",
+      "rules": "padding: 40px;\n\t\tbackground: white;"
+    },
+    {
+      "selector": ".single .site-main .entry, .page .site-main .entry",
+      "rules": "padding: 80px;"
+    },
+    {
+      "selector": ".single .site-main .entry-header-small .post-media > figure,\n.single .site-main .entry-header-small .post-media > figure > a:not(.pk-pin-it) > img",
+      "rules": "display: block;\n\theight: 100%;\n\twidth: 100%;"
+    },
+    {
+      "selector": ".single .site-main .entry-header-small .post-media > figure",
+      "rules": "display: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-ms-flex-direction: column;\n\tflex-direction: column;"
+    },
+    {
+      "selector": ".single .site-main .entry-header-small .post-media > figure > a:not(.pk-pin-it)",
+      "rules": "-webkit-box-flex: 1;\n\t-ms-flex: 1;\n\tflex: 1;\n\tdisplay: block;"
+    },
+    {
+      "selector": ".single .site-main .entry-header-small .post-media > figure > figcaption",
+      "rules": "-webkit-box-flex: 0;\n\t-ms-flex: 0;\n\tflex: 0;"
+    },
+    {
+      "selector": ".single .site-main .entry-header-small .post-media img",
+      "rules": "-o-object-fit: cover;\n\tobject-fit: cover;"
+    },
+    {
+      "selector": ".entry .entry-header",
+      "rules": "margin-bottom: 3rem;"
+    },
+    {
+      "selector": ".entry-header .entry-inline-meta",
+      "rules": "display: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-ms-flex-wrap: wrap;\n\tflex-wrap: wrap;\n\t-webkit-box-align: center;\n\t-ms-flex-align: center;\n\talign-items: center;"
+    },
+    {
+      "selector": ".entry-header .entry-inline-meta .post-categories",
+      "rules": "margin-right: 1rem;\n\tmargin-bottom: 1.5rem;"
+    },
+    {
+      "selector": ".entry-header .entry-inline-meta .post-meta",
+      "rules": "margin-bottom: 1.5rem;"
+    },
+    {
+      "selector": ".entry-single-header .entry-title",
+      "rules": "font-size: 2rem;"
+    },
+    {
+      "selector": ".entry-single-header .entry-title",
+      "rules": "font-size: 2.5rem;"
+    },
+    {
+      "selector": ".entry-single-header .entry-title,\n.entry-single-header .post-excerpt",
+      "rules": "margin-bottom: 1.5rem;"
+    },
+    {
+      "selector": ".entry-single-header .post-excerpt",
+      "rules": "max-width: 670px;"
+    },
+    {
+      "selector": ".entry-single-header .post-excerpt > *:last-child",
+      "rules": "margin-bottom: 0;"
+    },
+    {
+      "selector": ".entry-header.cs-overlay",
+      "rules": "margin-left: -20px;\n\tmargin-right: -20px;\n\twidth: calc(100% + 40px);\n\toverflow: hidden;"
+    },
+    {
+      "selector": ".entry-header.cs-overlay",
+      "rules": "margin-left: 0;\n\t\tmargin-right: 0;\n\t\twidth: 100%;"
+    },
+    {
+      "selector": ".entry-header.cs-overlay",
+      "rules": "margin-left: -40px;\n\t\tmargin-right: -40px;\n\t\tmargin-top: -40px;\n\t\tmargin-bottom: 40px;\n\t\twidth: calc(100% + 80px);"
+    },
+    {
+      "selector": ".entry-header.cs-overlay .cs-overlay-content",
+      "rules": "padding: 3rem;"
+    },
+    {
+      "selector": ".sidebar-disabled .entry-header.cs-overlay .cs-overlay-content",
+      "rules": "padding: 4rem;"
+    },
+    {
+      "selector": ".entry-header.cs-overlay .post-categories",
+      "rules": "top: 3rem;\n\t\tleft: 3rem;"
+    },
+    {
+      "selector": ".entry-header.cs-overlay .entry-title",
+      "rules": "max-width: 670px;"
+    },
+    {
+      "selector": ".entry-header.cs-overlay",
+      "rules": "margin-left: -80px;\n\t\tmargin-right: -80px;\n\t\tmargin-top: -80px;\n\t\tmargin-bottom: 80px;\n\t\twidth: calc(100% + 160px);"
+    },
+    {
+      "selector": ".entry-header-small",
+      "rules": "margin-bottom: 3rem;"
+    },
+    {
+      "selector": ".entry-header-small",
+      "rules": "display: -webkit-box;\n\t\tdisplay: -ms-flexbox;\n\t\tdisplay: flex;\n\t\t-ms-flex-wrap: wrap;\n\t\tflex-wrap: wrap;\n\t\tmargin-right: -20px;\n\t\tmargin-left: -20px;"
+    },
+    {
+      "selector": ".entry-header-small .entry-header",
+      "rules": "position: relative;\n\t\twidth: 100%;\n\t\tpadding-right: 20px;\n\t\tpadding-left: 20px;\n\t\t-webkit-box-flex: 0;\n\t\t-ms-flex: 0 0 50%;\n\t\tflex: 0 0 50%;\n\t\tmax-width: 50%;\n\t\tdisplay: -webkit-box;\n\t\tdisplay: -ms-flexbox;\n\t\tdisplay: flex;\n\t\t-webkit-box-orient: vertical;\n\t\t-webkit-box-direction: normal;\n\t\t-ms-flex-direction: column;\n\t\tflex-direction: column;\n\t\tmargin-bottom: 0 !important;"
+    },
+    {
+      "selector": ".entry-header-small .post-media",
+      "rules": "margin-top: 0;\n\t\tmargin-bottom: 0;\n\t\tposition: relative;\n\t\twidth: 100%;\n\t\tpadding-right: 20px;\n\t\tpadding-left: 20px;\n\t\t-webkit-box-flex: 0;\n\t\t-ms-flex: 0 0 50%;\n\t\tflex: 0 0 50%;\n\t\tmax-width: 50%;"
+    },
+    {
+      "selector": ".entry-header-small .post-header",
+      "rules": "margin-top: auto;"
+    },
+    {
+      "selector": ".entry-container",
+      "rules": "display: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-ms-flex-wrap: wrap;\n\tflex-wrap: wrap;"
+    },
+    {
+      "selector": ".entry-container .entry-content-wrap,\n.entry-container .entry-sidebar-wrap",
+      "rules": "width: 100%;"
+    },
+    {
+      "selector": ".entry-container",
+      "rules": "margin-right: -20px;\n\t\tmargin-left: -20px;"
+    },
+    {
+      "selector": ".entry-container .entry-content-wrap,\n\t.entry-container .entry-sidebar-wrap",
+      "rules": "position: relative;\n\t\twidth: 100%;\n\t\tpadding-right: 20px;\n\t\tpadding-left: 20px;"
+    },
+    {
+      "selector": ".entry-container .entry-content-wrap",
+      "rules": "-webkit-box-flex: 0;\n\t\t-ms-flex: 0 0 calc(100% - 120px);\n\t\tflex: 0 0 calc(100% - 120px);\n\t\twidth: calc(100% - 120px);\n\t\tmax-width: 710px;\n\t\tmargin-left: auto;\n\t\tmargin-right: auto;"
+    },
+    {
+      "selector": ".entry-container .entry-sidebar-wrap",
+      "rules": "-webkit-box-flex: 0;\n\t\t-ms-flex: 0 0 120px;\n\t\tflex: 0 0 120px;\n\t\tmax-width: 120px;"
+    },
+    {
+      "selector": ".post-sidebar-enabled.sidebar-disabled .entry-container",
+      "rules": "max-width: 830px;\n\t\tmargin-left: auto;\n\t\tmargin-right: auto;\n\t\t-webkit-transform: translateX(-60px);\n\t\ttransform: translateX(-60px);"
+    },
+    {
+      "selector": ".page-title",
+      "rules": "margin-bottom: 0;"
+    },
+    {
+      "selector": ".cs-overlay-content",
+      "rules": "position: relative;\n\tpadding: 20px;\n\twidth: 100%;"
+    },
+    {
+      "selector": ".cs-overlay-content a",
+      "rules": "position: relative;\n\tz-index: 1;"
+    },
+    {
+      "selector": ".cs-overlay-content h4, .cs-overlay-content h5, .cs-overlay-content h6,\n.cs-overlay-content .h4, .cs-overlay-content .h5, .cs-overlay-content .h6",
+      "rules": "margin-bottom: 0.5rem;"
+    },
+    {
+      "selector": ".cs-overlay-ratio .cs-overlay-content",
+      "rules": "display: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-ms-flex-direction: column;\n\tflex-direction: column;\n\t-webkit-box-pack: end;\n\tjustify-content: flex-end;\n\t-ms-flex-pack: start;\n\tposition: relative;"
+    },
+    {
+      "selector": ".navbar-nav .cs-mega-menu .cs-mm-post .entry-header .entry-title",
+      "rules": "margin: 1rem 0 0.5rem;"
+    },
+    {
+      "selector": ".navbar-nav .cs-mega-menu .cs-mm-post .entry-header .post-meta",
+      "rules": "margin-bottom: 0;\n\t-webkit-box-pack: center;\n\t-ms-flex-pack: center;\n\tjustify-content: center;"
+    },
+    {
+      "selector": ".navbar-nav .cs-mega-menu .cs-mm-post .entry-header .post-meta .cs-icon",
+      "rules": "display: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-align: center;\n\t-ms-flex-align: center;\n\talign-items: center;"
+    },
+    {
+      "selector": ".hero-image-outside .cs-overlay-content,\n\t.hero-image-outside .cs-overlay-background",
+      "rules": "-webkit-box-flex: 0;\n\t\t-ms-flex: 0 0 50%;\n\t\tflex: 0 0 50%;\n\t\tmax-width: 50%;"
+    },
+    {
+      "selector": ".hero-image-outside .cs-overlay-content",
+      "rules": "margin-bottom: 0;"
+    },
+    {
+      "selector": "/*--------------------------------------------------------------\n## Category Posts\n--------------------------------------------------------------*/\n.section-category-posts",
+      "rules": "margin-bottom: 3rem;"
+    },
+    {
+      "selector": ".cs-category-posts",
+      "rules": "display: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-ms-flex-wrap: wrap;\n\tflex-wrap: wrap;\n\tmargin-right: -20px;\n\tmargin-left: -20px;"
+    },
+    {
+      "selector": ".cs-category-post",
+      "rules": "position: relative;\n\twidth: 100%;\n\tpadding-right: 20px;\n\tpadding-left: 20px;"
+    },
+    {
+      "selector": ".cs-category-post article",
+      "rules": "display: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-ms-flex-direction: column;\n\tflex-direction: column;\n\theight: 100%;"
+    },
+    {
+      "selector": ".cs-category-post .cs-overlay h2",
+      "rules": "font-size: 1.25rem;"
+    },
+    {
+      "selector": ".cs-category-post .cs-overlay h2",
+      "rules": "font-size: 2rem;"
+    },
+    {
+      "selector": ".cs-category-post .cs-card",
+      "rules": "-webkit-box-flex: 1;\n\t-ms-flex-positive: 1;\n\tflex-grow: 1;\n\t-webkit-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);\n\tbox-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);"
+    },
+    {
+      "selector": ".cs-category-post .cs-card",
+      "rules": "-webkit-box-shadow: none;\n\t\tbox-shadow: none;"
+    },
+    {
+      "selector": ".sidebar-disabled .cs-category-post .cs-overlay h2",
+      "rules": "font-size: 2rem;"
+    },
+    {
+      "selector": ".cs-category-post:first-child",
+      "rules": "-webkit-box-flex: 0;\n\t-ms-flex: 0 0 100%;\n\tflex: 0 0 100%;\n\tmax-width: 100%;"
+    },
+    {
+      "selector": ".cs-category-post:first-child",
+      "rules": "-webkit-box-flex: 0;\n\t\t-ms-flex: 0 0 50%;\n\t\tflex: 0 0 50%;\n\t\tmax-width: 50%;"
+    },
+    {
+      "selector": ".cs-category-post:first-child",
+      "rules": "-webkit-box-flex: 0;\n\t\t-ms-flex: 0 0 66.6666666667%;\n\t\tflex: 0 0 66.6666666667%;\n\t\tmax-width: 66.6666666667%;"
+    },
+    {
+      "selector": ".cs-category-post:first-child .cs-overlay",
+      "rules": "height: 100%;"
+    },
+    {
+      "selector": ".sidebar-disabled .cs-category-post:first-child",
+      "rules": "-webkit-box-flex: 0;\n\t\t-ms-flex: 0 0 100%;\n\t\tflex: 0 0 100%;\n\t\tmax-width: 100%;"
+    },
+    {
+      "selector": ".sidebar-disabled .cs-category-post:first-child",
+      "rules": "-webkit-box-flex: 0;\n\t\t-ms-flex: 0 0 50%;\n\t\tflex: 0 0 50%;\n\t\tmax-width: 50%;"
+    },
+    {
+      "selector": ".cs-category-post:not(:first-child)",
+      "rules": "-webkit-box-flex: 0;\n\t-ms-flex: 0 0 100%;\n\tflex: 0 0 100%;\n\tmax-width: 100%;\n\tmargin-top: 3rem;"
+    },
+    {
+      "selector": ".cs-category-post:not(:first-child)",
+      "rules": "margin-top: 0;\n\t\t-webkit-box-flex: 0;\n\t\t-ms-flex: 0 0 50%;\n\t\tflex: 0 0 50%;\n\t\tmax-width: 50%;"
+    },
+    {
+      "selector": ".cs-category-post:not(:first-child)",
+      "rules": "-webkit-box-flex: 0;\n\t\t-ms-flex: 0 0 33.3333333333%;\n\t\tflex: 0 0 33.3333333333%;\n\t\tmax-width: 33.3333333333%;"
+    },
+    {
+      "selector": ".sidebar-disabled .cs-category-post:not(:first-child)",
+      "rules": "margin-top: 3rem;\n\t-webkit-box-flex: 0;\n\t-ms-flex: 0 0 100%;\n\tflex: 0 0 100%;\n\tmax-width: 100%;"
+    },
+    {
+      "selector": ".sidebar-disabled .cs-category-post:not(:first-child)",
+      "rules": "-webkit-box-flex: 0;\n\t\t-ms-flex: 0 0 50%;\n\t\tflex: 0 0 50%;\n\t\tmax-width: 50%;"
+    },
+    {
+      "selector": ".sidebar-disabled .cs-category-post:not(:first-child)",
+      "rules": "-webkit-box-flex: 0;\n\t\t-ms-flex: 0 0 25%;\n\t\tflex: 0 0 25%;\n\t\tmax-width: 25%;\n\t\tmargin-top: 0;"
+    },
+    {
+      "selector": ".content-area .pk-subscribe-with-name input[type=\"text\"] + input[type=\"text\"]",
+      "rules": "border-top: 1px solid #e9ecef;\n\tmargin-top: 0;\n\tborder-radius: 0;"
+    },
+    {
+      "selector": ".content-area .pk-subscribe-with-name input[type=\"text\"]",
+      "rules": "width: 100%;\n\ttext-align: center;"
+    },
+    {
+      "selector": ".content-area .pk-subscribe-with-name button",
+      "rules": "margin-top: 0;"
+    },
+    {
+      "selector": ".content-area .pk-subscribe-with-name .pk-input-group",
+      "rules": "-webkit-box-orient: horizontal;\n\t\t-webkit-box-direction: normal;\n\t\t-ms-flex-direction: row;\n\t\tflex-direction: row;"
+    },
+    {
+      "selector": ".content-area .pk-subscribe-with-name input[type=\"text\"] + input[type=\"text\"]",
+      "rules": "border-left: 1px solid #e9ecef;\n\t\tborder-top: none;"
+    },
+    {
+      "selector": ".content-area .pk-subscribe-with-name input[type=\"text\"]",
+      "rules": "width: 1%;\n\t\ttext-align: left;"
+    },
+    {
+      "selector": ".content-area .pk-subscribe-with-name button",
+      "rules": "margin-top: 0.5rem;"
+    }
+  ]
+}

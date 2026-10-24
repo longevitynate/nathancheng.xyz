@@ -1,0 +1,39 @@
+{
+  "assets": {
+    "hero.png": {
+      "source_url": "https://nathancheng.xyz/wp-content/uploads/2021/05/Nathan-padded-avatar-3.png",
+      "input_sha256": "fba090ecb105761c63e192e05407ef4bdec59e44e19f09b2efeaf959b3d25062",
+      "output_sha256": "89d131249fbccc16528ffd6e380dd308e7f92a5ddaf14aaf19ba6b16db1818d7",
+      "bytes": 114268,
+      "width": 700,
+      "height": 600,
+      "method": "Convert embedded color profile to sRGB, decode pixels, and encode fresh image without source metadata"
+    },
+    "avatar.png": {
+      "source_url": "https://secure.gravatar.com/avatar/8b6933b086bd3597583b9f6673bf12e6?s=160&d=mm&r=g",
+      "input_sha256": "9c618e41e242d0ff1f0b6d08593da2ad7434a16e151bc38d5fea162cdc067b85",
+      "output_sha256": "66d218c7cae3e356c06c6c90bd5e6ea1ec64c6e37cbb6427c468f23b0af44187",
+      "bytes": 25875,
+      "width": 160,
+      "height": 160,
+      "method": "Convert embedded color profile to sRGB, decode pixels, and encode fresh image without source metadata"
+    },
+    "portrait.jpg": {
+      "source_url": "https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867-768x1024.jpg",
+      "input_sha256": "f626e69c4959cadd354d6c9d6c79d24704ddf5e20769a834ad83a09de6b18773",
+      "output_sha256": "be733dd6346b715b0b85f451edde8c9d926f115bebd2185c9e4b8708c70ba12a",
+      "bytes": 129084,
+      "width": 768,
+      "height": 1024,
+      "method": "Convert embedded color profile to sRGB, decode pixels, and encode fresh image without source metadata"
+    },
+    "nathan-serif.woff": {
+      "source_url": "https://nathancheng.xyz/wp-content/uploads/2025/09/0QI6MX1D_JOuGQbT0gvTJPa787weuyJF.woff",
+      "input_sha256": "e3e3def7d51e507f05d9b0ced0543ac0fdd918e260e2a5e51c01f6ea6e62b420",
+      "output_sha256": "fe68a5a4a568b1f334850ed3bfb0560b5feba9483e2db2ebe3e18ec9e0a8a8b3",
+      "bytes": 60148,
+      "method": "Rebuild recognized TrueType tables; remove hint programs and opaque metadata"
+    }
+  },
+  "notes": "Structural validation and reconstruction reduce risk; not a malware-free guarantee."
+}

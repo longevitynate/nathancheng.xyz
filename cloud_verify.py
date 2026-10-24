@@ -53,9 +53,14 @@ if not (ROOT/'source/asset-audit.json').exists():
             download(url,folder/name,kind,limit)
             args.extend(['--'+flag,str(folder/name)])
         run(*args)
-run('inspect_original.py')
 run('build.py')
 run('verify.py')
+
+# A normal CI run checks that the committed deployment matches its sources.
+if '--export' not in sys.argv:
+    subprocess.run(['git','diff','--exit-code','--','docs','verification.json'],cwd=ROOT,check=True,timeout=30)
+    print('Verified committed deployment matches its sources.',flush=True)
+    sys.exit(0)
 
 # Export only rebuilt assets and verified public-site files. This does not
 # give the build job write permission to the repository.

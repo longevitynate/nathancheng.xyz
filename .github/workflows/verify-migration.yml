@@ -1,10 +1,13 @@
-name: Verify personal site migration
+name: Verify static personal site
 on:
   push:
-    branches: [restore-original-design]
+    branches: [main, restore-original-design]
     paths:
       - '**.py'
       - 'assets/**'
+      - 'content/**'
+      - 'source/**'
+      - 'docs/**'
       - '.github/workflows/verify-migration.yml'
 permissions:
   contents: read

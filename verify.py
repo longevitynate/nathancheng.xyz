@@ -111,3 +111,13 @@ for malicious in [
     else:
         raise AssertionError('Sanitizer accepted unsafe content')
 print('PASS: Content allowlist, active-content restrictions, CSP, and audited asset hashes.')
+
+css=(OUT/'assets/style.css').read_text()
+assert not re.search(r'@import\b|expression\s*\(',css,re.I), 'Unexpected active CSS'
+for match in re.finditer(r'url\(\s*["\']?([^"\'\s)]+)',css):
+    value=match.group(1)
+    u=urlsplit(value)
+    assert not u.scheme and not u.netloc, 'Remote CSS resource'
+    target=(OUT/'assets'/u.path).resolve()
+    assert target.is_relative_to((OUT/'assets').resolve()) and target.is_file(), 'Unknown CSS resource'
+print('PASS: Stylesheet resources are local and present.')
