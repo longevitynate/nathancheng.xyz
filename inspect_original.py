@@ -37,6 +37,6 @@ css=read('/wp-content/themes/expertly/style.css?ver=1.0.0')
 wanted=[]
 for m in re.finditer(r'([^{}]+)\{([^{}]*)\}',css):
     selector=m[1].strip()
-    if any(x in selector for x in ('.entry-share','.entry-header','.entry-content-wrap','.entry-container','.post-share','.single-post .entry','.page .entry','.entry-footer','.archive-header','.site-main','.content-area')):
+    if any(x in selector for x in ('.entry-share','.entry-header','.entry-content-wrap','.entry-container','.post-share','.single-post .entry','.page .entry','.entry-footer','.archive-header','.site-main','.content-area','.cs-category-posts','.cs-category-post ','.section-category-posts','.cs-overlay-content','.headings-large','.page-title')):
         wanted.append({'selector':selector,'rules':m[2].strip()})
 print('NATHAN_ORIGINAL_CSS '+json.dumps(wanted[:120]),flush=True)

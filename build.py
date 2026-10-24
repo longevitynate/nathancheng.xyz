@@ -32,7 +32,7 @@ def write(route, html):
     dest = OUT / route.strip('/') / 'index.html'
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(html)
-from presentation import shell, meta_line, listing, homepage
+from presentation import shell, meta_line, listing, homepage, post_footer
 from sanitize_content import sanitize
 
 # Only audited, rebuilt assets may enter the published directory.
@@ -60,11 +60,23 @@ for item in META:
     rendered = localize(original, route)
     assert text(original) == text(rendered), f'Text changed: {route}'
     assert text(expected[item['slug']]) == text(rendered), f'Source text mismatch: {route}'
+    toc = ''
+    if item['slug'] in ('ride-along-compressing-a-biology-undergrad-into-1-year','who-is-the-most-handsome-asian-guy-in-toronto-nathan-cheng'):
+        sections = []
+        def heading(m):
+            anchor = 'section-' + str(len(sections)+1)
+            sections.append((anchor,text(m.group(1))))
+            return '<h2 id="'+anchor+'">'+m.group(1)+'</h2>'
+        rendered = re.sub(r'<h2>(.*?)</h2>',heading,rendered,flags=re.S)
+        toc = '<nav class="table-of-contents" aria-label="Table of Contents"><h2>Table of Contents</h2><ol>'+''.join('<li><a href="#'+anchor+'">'+escape(title)+'</a></li>' for anchor,title in sections)+'</ol></nav>'
     title = unescape(item['title']['rendered'])
     body = f'<article class="article {item["type"]}"><header class="article-heading"><h1 class="article-title">{escape(title)}</h1>'
     if item['type'] == 'post':
         body += meta_line(item, route)
-    body += f'</header><div class="prose" data-original-content>{rendered}</div></article>'
+    body += f'</header>{toc}<div class="prose" data-original-content>{rendered}</div>'
+    if item['type'] == 'post':
+        body += post_footer(item, route)
+    body += '</article>'
     write(route, shell(title, route, body, text(original)[:180]))
     report.append({'path':route,'text_matches_source':True,'text_sha256':hashlib.sha256(text(rendered).encode()).hexdigest(),'characters':len(text(rendered))})
     search.append({'title':title,'path':route,'text':text(original)})

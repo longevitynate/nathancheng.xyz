@@ -78,6 +78,19 @@ def homepage(featured, content):
     post = f'<article class="article post"><header class="article-heading"><h2 class="article-title"><a href="{featured["slug"]}/">{escape(unescape(featured["title"]["rendered"]))}</a></h2>{meta_line(featured,"/")}</header><div class="prose" data-original-content>{content}</div></article>'
     return hero + layout(post,'/')
 
+def post_footer(item, route):
+    tag_html = ''
+    if item.get('tags'):
+        tags = json.loads((ROOT/'source/tags.json').read_text())
+        links = [f'<a href="{relative("/tag/"+t["slug"]+"/",route)}">{escape(t["name"])}</a>' for t in tags if t['id'] in item['tags']]
+        tag_html = '<section class="related-tags"><h2>Related Tags</h2><p>'+', '.join(links)+'</p></section>'
+    return f'''<div class="post-footer"><section class="post-author"><img src="{relative('/assets/avatar.png',route)}" width="80" height="80" alt="Nathan Cheng" loading="lazy"><div>
+<h2><a href="{relative('/author/nathan/',route)}">Nathan Cheng</a></h2><p>{escape(HOME['author'].strip())}</p><div class="social-links">{socials(route)}</div></div></section>{tag_html}</div>'''
+
+def category_menu(route):
+    posts = ''.join(f'<a class="menu-post" href="{relative("/"+i["slug"]+"/",route)}"><strong>{escape(unescape(i["title"]["rendered"]))}</strong><time datetime="{i["date"][:10]}">{date_label(i)}</time></a>' for i in POSTS if 11 in i.get('categories',[]))
+    return f'<div class="category-menu"><a class="menu-category" href="{relative("/category/learning/",route)}">Learning</a><div class="menu-posts">{posts}</div></div>'
+
 def shell(title, route, body, description=None):
     description = description or HOME['hero']['description']
     def href(target): return escape(relative(target,route),quote=True)
@@ -96,7 +109,7 @@ def shell(title, route, body, description=None):
 <body id="top"><a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="header-inner site-shell"><div class="brand-group"><a class="brand" href="{href('/')}">Nathan Cheng</a><span class="tagline">Adventures in Longevity.</span></div>
 <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">{icon('menu')}</button>
-<nav class="main-nav" id="main-nav" aria-label="Main navigation"><details class="categories"><summary>Categories {icon('chevron')}</summary><div class="category-menu"><a href="{href('/category/learning/')}">Learning</a></div></details><a href="{href('/about/')}"{current}>About</a></nav>
+<nav class="main-nav" id="main-nav" aria-label="Main navigation"><details class="categories"><summary>Categories {icon('chevron')}</summary>{category_menu(route)}</details><a href="{href('/about/')}"{current}>About</a><div class="mobile-search">{search_form(route,'mobile')}</div></nav>
 <div class="header-social">{socials(route,True)}<button class="header-search-button" type="button" aria-label="Search the site" aria-controls="header-search" aria-expanded="false">{icon('search')}</button></div></div>
 <div id="header-search" class="header-search-panel" hidden><div class="site-shell">{search_form(route,'header')}</div></div></header>
 <main id="main">{body}</main>
