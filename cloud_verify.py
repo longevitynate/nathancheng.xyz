@@ -53,6 +53,7 @@ if not (ROOT/'source/asset-audit.json').exists():
             download(url,folder/name,kind,limit)
             args.extend(['--'+flag,str(folder/name)])
         run(*args)
+run('inspect_original.py')
 run('build.py')
 run('verify.py')
 

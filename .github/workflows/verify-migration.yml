@@ -19,7 +19,7 @@ jobs:
       - name: Install image and font parsers from PyPI
         run: |
           python3 -m venv /tmp/nathan-migration-tools
-          /tmp/nathan-migration-tools/bin/python -m pip install --index-url https://pypi.org/simple --only-binary=:all: Pillow fonttools
+          /tmp/nathan-migration-tools/bin/python -m pip install --index-url https://pypi.org/simple --only-binary=:all: Pillow==13.0.0 fonttools==4.67.0
       - name: Rebuild selected assets and verify the complete static site
         run: /tmp/nathan-migration-tools/bin/python cloud_verify.py
       - name: Save verified site

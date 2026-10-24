@@ -10,7 +10,7 @@ standard-library-only. Originals remain outside assets/ and docs/.
 from pathlib import Path
 from io import BytesIO
 import argparse, hashlib, json, warnings
-from PIL import Image, ImageOps
+from PIL import Image, ImageOps, ImageCms
 from fontTools.ttLib import TTFont
 from fontTools import subset
 
@@ -48,7 +48,14 @@ def rebuild_image(path, name, expected):
     with Image.open(BytesIO(data)) as source:
         pixels = ImageOps.exif_transpose(source)
         mode = 'RGB' if name.endswith('.jpg') else 'RGBA'
-        pixels = pixels.convert(mode)
+        icc = source.info.get('icc_profile')
+        if icc:
+            if len(icc) > 1_000_000:
+                raise ValueError('Oversized color profile')
+            pixels = ImageCms.profileToProfile(pixels, ImageCms.ImageCmsProfile(BytesIO(icc)),
+                                               ImageCms.createProfile('sRGB'),outputMode=mode)
+        else:
+            pixels = pixels.convert(mode)
         # A fresh image stores only decoded pixels, never source metadata.
         clean = Image.frombytes(mode, pixels.size, pixels.tobytes())
         result = BytesIO()
@@ -62,7 +69,7 @@ def rebuild_image(path, name, expected):
     return rebuilt, {'source_url':SOURCES[name], 'input_sha256':digest(data),
                      'output_sha256':digest(rebuilt),'bytes':len(rebuilt),
                      'width':expected[0],'height':expected[1],
-                     'method':'Decode pixels and encode fresh image without source metadata'}
+                     'method':'Convert embedded color profile to sRGB, decode pixels, and encode fresh image without source metadata'}
 
 def rebuild_font(path):
     data = bounded_read(path, 1_000_000)
