@@ -1,5 +1,7 @@
 # Nathan Cheng's personal website
 
+> Design restoration draft: source changes on this branch are not published or fully tested. See `DESIGN-MIGRATION.md` for the remaining asset and browser checks. `docs/` still contains the last published text-only build.
+
 Portable static replacement for https://nathancheng.xyz, hosted in Nathan's personal GitHub account. No Less Death hosting, billing, databases, or credentials are used.
 
 ## Edit and publish
@@ -20,7 +22,7 @@ The public WordPress REST API was captured on October 24, 2026. All 3 published 
 
 Six author/category/tag archives, local full-text search, XML sitemaps, and a new RSS file are included. A live sitemap audit on October 24, 2026 found 13 unique URLs across all 5 child sitemaps, including the empty `/author/admin/` archive. All 13 are present, and the original sitemap index and child sitemap URLs are preserved. `source/sitemap-audit.json` records this inventory. `verification.json` records hashes of normalized text (only HTML whitespace is normalized). The original API responses are retained in `source/` for audit and backup; they contain only publicly returned data.
 
-The design is text-only. Portraits were omitted after the browser image download was declined. Captions remain unchanged. There were zero public comments. WordPress administration, comment submission, share counters, and theme scripts are not part of the static site. RSS is now at `/feed.xml`; `/feed/` contains a browser redirect, which some RSS readers will not follow. Existing RSS subscribers should use `/feed.xml`.
+The published baseline is text-only. This branch prepares the original layout, local portraits, and Lora article font. Run `prepare_assets.py` with the inspected local asset paths before building; it requires Pillow and fonttools only for this one-time preparation. Captions and article wording remain unchanged. There were zero public comments. WordPress administration, comment submission, share counters, and theme scripts are not part of the static site. RSS is now at `/feed.xml`; `/feed/` contains a browser redirect, which some RSS readers will not follow. Existing RSS subscribers should use `/feed.xml`.
 
 ## Point nathancheng.xyz at this site
 

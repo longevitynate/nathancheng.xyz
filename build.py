@@ -3,7 +3,7 @@
 from pathlib import Path
 from html import escape, unescape
 from html.parser import HTMLParser
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, urljoin
 from datetime import datetime, timezone
 from email.utils import format_datetime
 import json, re, posixpath, shutil, hashlib
@@ -27,43 +27,30 @@ def relative(target, route):
     path = posixpath.relpath(target.strip('/') or '.', route.strip('/') or '.')
     return path + ('/' if target.endswith('/') and path != '.' else '')
 def localize(html, route):
-    # Remove image markup only. Captions and every text node are retained.
-    html = re.sub(r'<img\b[^>]*>', '', html, flags=re.I)
-    def link(m):
-        url = unescape(m.group(1)); u = urlsplit(url)
-        if u.hostname in ('nathancheng.xyz', 'www.nathancheng.xyz'):
-            return 'href="' + escape(relative(u.path, route) + ('?' + u.query if u.query else '') + ('#' + u.fragment if u.fragment else ''), quote=True) + '"'
-        return m.group(0)
-    html = re.sub(r'href="([^"]*)"', link, html)
-    html = html.replace('<iframe ', '<iframe title="Longevity Marketcap newsletter" loading="lazy" ')
-    return html
+    return sanitize(html, lambda target: relative(target, route))
 def write(route, html):
     dest = OUT / route.strip('/') / 'index.html'
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(html)
-def shell(title, route, body, description=None):
-    description = description or HOME['hero']['description']
-    def href(target): return escape(relative(target, route), quote=True)
-    return f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{escape(title)} - Nathan Cheng</title><meta name="description" content="{escape(description, quote=True)}">
-<link rel="canonical" href="{ORIGIN}{route}"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:type" content="website"><meta property="og:url" content="{ORIGIN}{route}">
-<link rel="icon" href="{href('/assets/favicon.svg')}" type="image/svg+xml"><link rel="stylesheet" href="{href('/assets/style.css')}"><link rel="alternate" type="application/rss+xml" title="Nathan Cheng" href="{href('/feed.xml')}">
-<script src="{href('/assets/search-data.js')}" defer></script><script src="{href('/assets/site.js')}" defer></script></head>
-<body id="top"><a class="skip-link" href="#main">Skip to content</a><div class="site-shell">
-<header class="site-header"><a class="brand" href="{href('/')}">Nathan Cheng<span>Adventures in Longevity.</span></a><nav aria-label="Main navigation"><a href="{href('/about/')}">About</a><a href="{href('/category/learning/')}">Learning</a><a href="https://twitter.com/realnathancheng">Twitter <span aria-hidden="true">↗</span></a></nav></header>
-<main id="main">{body}</main>
-<section class="site-search" aria-label="Search the site"><form action="{href('/')}" role="search"><label for="search">Search for:</label><div class="search-row"><input id="search" name="s" type="search" placeholder="Input your search keywords" autocomplete="off"><button type="submit">Search <span aria-hidden="true">↗</span></button></div></form><div id="search-results" aria-live="polite" hidden></div></section>
-<footer><div><strong>Nathan Cheng</strong><p>{escape(HOME['author'].strip())}</p></div><div class="footer-links"><a href="{href('/feed.xml')}">RSS</a><a href="#top">Back to top ↑</a><span>All rights reserved. 2021</span></div></footer>
-</div></body></html>'''
-def meta_line(item):
-    date = datetime.fromisoformat(item['date'])
-    return f'<p class="article-meta"><a href="/author/nathan/">Nathan Cheng</a><span>·</span><time datetime="{item["date"][:10]}">{date.strftime("%B")} {date.day}, {date.year}</time></p>'
-def listing(items, route):
-    return '<div class="article-list">' + ''.join(f'<a class="article-row" href="{relative("/"+i["slug"]+"/",route)}"><span>{escape(unescape(i["title"]["rendered"]))}</span><span aria-hidden="true">↗</span></a>' for i in items) + '</div>'
+from presentation import shell, meta_line, listing, homepage
+from sanitize_content import sanitize
+
+# Only audited, rebuilt assets may enter the published directory.
+audit_path = ROOT/'source/asset-audit.json'
+if not audit_path.is_file():
+    raise SystemExit('Prepare the four assets with prepare_assets.py before building this draft.')
+asset_report = json.loads(audit_path.read_text())
+for name in ['hero.png','avatar.png','portrait.jpg','lora.woff']:
+    path = ROOT/'assets'/name
+    assert path.is_file(), f'Missing sanitized asset: {name}'
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == asset_report['assets'][name]['output_sha256'], f'Asset changed since audit: {name}'
 
 OUT.mkdir(exist_ok=True)
-shutil.copytree(ROOT/'assets', OUT/'assets', dirs_exist_ok=True)
+asset_names = {'style.css','site.js','favicon.svg','hero.png','avatar.png','portrait.jpg','lora.woff'}
+assert {p.name for p in (ROOT/'assets').iterdir() if p.is_file()} == asset_names, 'Unexpected asset file'
+(OUT/'assets').mkdir(exist_ok=True)
+for name in asset_names:
+    shutil.copy2(ROOT/'assets'/name, OUT/'assets'/name)
 expected = {p['slug']:p['content']['rendered'] for kind in ['posts','pages'] for p in json.loads((ROOT/'source'/f'{kind}.json').read_text())}
 report = []
 search = []
@@ -74,9 +61,9 @@ for item in META:
     assert text(original) == text(rendered), f'Text changed: {route}'
     assert text(expected[item['slug']]) == text(rendered), f'Source text mismatch: {route}'
     title = unescape(item['title']['rendered'])
-    body = f'<article class="article"><header class="article-heading"><h1>{escape(title)}</h1>'
+    body = f'<article class="article {item["type"]}"><header class="article-heading"><h1 class="article-title">{escape(title)}</h1>'
     if item['type'] == 'post':
-        body += meta_line(item).replace('href="/author/nathan/"',f'href="{relative("/author/nathan/",route)}"')
+        body += meta_line(item, route)
     body += f'</header><div class="prose" data-original-content>{rendered}</div></article>'
     write(route, shell(title, route, body, text(original)[:180]))
     report.append({'path':route,'text_matches_source':True,'text_sha256':hashlib.sha256(text(rendered).encode()).hexdigest(),'characters':len(text(rendered))})
@@ -85,21 +72,19 @@ for item in META:
 featured = next(i for i in META if i['slug']=='about-me')
 featured_html = (ROOT/'content/about-me.html').read_text()
 assert text(HOME['content']) == text(featured_html), 'Homepage differs from the featured post'
-home = f'''<section class="hero"><p class="eyebrow">Adventures in Longevity.</p><h1>{escape(HOME['hero']['title'])}</h1><p class="hero-description">{escape(HOME['hero']['description'])}</p></section>
-<section class="work"><div class="section-label"><h2>{escape(featured['title']['rendered'])}</h2><span aria-hidden="true">↓</span></div><div class="prose projects" data-original-content>{localize(featured_html,'/')}</div></section>
-<section class="learning"><div class="section-label"><h2>Learning</h2></div>{listing([i for i in META if 11 in i.get('categories',[])],'/')}</section>'''
+home = homepage(featured, localize(featured_html,'/'))
 write('/', shell('Nathan Cheng', '/', home))
 
 archives = []
 for kind, prefix, key in [('categories','category','categories'),('tags','tag','tags')]:
     for term in json.loads((ROOT/'source'/f'{kind}.json').read_text()):
         route = f'/{prefix}/{term["slug"]}/'
-        body = f'<section class="archive"><p class="eyebrow">{escape(prefix.title())}</p><h1>{escape(term["name"])}</h1>{listing([i for i in META if term["id"] in i.get(key,[])],route)}</section>'
+        body = f'<section class="archive"><header class="archive-heading"><p class="widget-label">{escape(prefix.title())}</p><h1>{escape(term["name"])}</h1></header>{listing([i for i in META if term["id"] in i.get(key,[])],route)}</section>'
         write(route,shell(term['name'],route,body)); archives.append(route)
 route = '/author/nathan/'
-write(route,shell('Nathan Cheng',route,f'<section class="archive"><p class="eyebrow">Author</p><h1>Nathan Cheng</h1><p class="lede">{escape(HOME["author"].strip())}</p>{listing([i for i in META if i["type"]=="post"],route)}</section>')); archives.append(route)
+write(route,shell('Nathan Cheng',route,f'<section class="archive"><header class="archive-heading"><p class="widget-label">Author</p><h1>Nathan Cheng</h1><p>{escape(HOME["author"].strip())}</p></header>{listing([i for i in META if i["type"]=="post"],route)}</section>')); archives.append(route)
 route = '/author/admin/'
-write(route,shell('Admin',route,'<section class="archive"><p class="eyebrow">Author</p><h1>Admin</h1><p>0 posts</p><p>It seems we cannot find what you are looking for. Perhaps searching can help.</p></section>')); archives.append(route)
+write(route,shell('Admin',route,'<section class="archive"><header class="archive-heading"><p class="widget-label">Author</p><h1>Admin</h1><p>0 posts</p></header><p class="empty-archive">It seems we cannot find what you are looking for. Perhaps searching can help.</p></section>')); archives.append(route)
 
 # The browser search works without a server, network API, or dependencies.
 (OUT/'assets/search-data.js').write_text('window.SITE_SEARCH = '+json.dumps(search,ensure_ascii=False).replace('</','<\\/')+';\n')
@@ -119,10 +104,11 @@ for item in META:
     if item['type']!='post': continue
     url = ORIGIN+'/'+item['slug']+'/'
     date = format_datetime(datetime.fromisoformat(item['date']).replace(tzinfo=timezone.utc))
-    content = (ROOT/'content'/f'{item["slug"]}.html').read_text()
+    content = localize((ROOT/'content'/f'{item["slug"]}.html').read_text(),'/'+item['slug']+'/')
+    content = re.sub(r'(href|src)="([^"]*)"', lambda m: m.group(1)+'="'+escape(urljoin(url,unescape(m.group(2))),quote=True)+'"',content)
     rss += f'<item><title>{escape(unescape(item["title"]["rendered"]))}</title><link>{url}</link><guid>{url}</guid><pubDate>{date}</pubDate><description>{escape(content)}</description></item>'
 (OUT/'feed.xml').write_text(rss+'</channel></rss>\n')
 write('/feed/', '<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Nathan Cheng RSS</title><meta http-equiv="refresh" content="0;url=../feed.xml"></head><body><a href="../feed.xml">Nathan Cheng RSS feed</a></body></html>')
-(OUT/'404.html').write_text(shell('Page not found','/', '<section class="archive"><p class="eyebrow">404</p><h1>Page not found.</h1><p><a href="https://nathancheng.xyz/">Return to Nathan Cheng</a></p></section>'))
-(ROOT/'verification.json').write_text(json.dumps({'captured':'2026-10-24','source':ORIGIN,'pages':report,'homepage_matches_source':True,'published_comments':0,'images_omitted':True,'routes':routes},indent=2)+'\n')
+(OUT/'404.html').write_text(shell('Page not found','/', '<section class="archive site-shell"><header class="archive-heading"><p class="widget-label">404</p><h1>Page not found.</h1><p><a href="https://nathancheng.xyz/">Return to Nathan Cheng</a></p></header></section>'))
+(ROOT/'verification.json').write_text(json.dumps({'captured':'2026-10-24','source':ORIGIN,'pages':report,'homepage_matches_source':True,'published_comments':0,'images_omitted':False,'assets_sanitized':True,'routes':routes},indent=2)+'\n')
 print(f'Built {len(routes)} pages. All 6 content bodies and the homepage match the WordPress source text.')

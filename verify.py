@@ -55,3 +55,57 @@ assert index==set(audit['sitemaps']), 'Sitemap index mismatch'
 assert not any(re.search(r'src="https?://(?:www\.)?nathancheng\.xyz/wp-content/', f.read_text()) for f in OUT.rglob('*.html')), 'WordPress asset dependency remains'
 print(f'PASS: {checked} HTML documents, all internal assets/links, 6 exact content hashes, and XML feeds/sitemaps.')
 print(f'PASS: All {len(live_paths)} live sitemap URLs are migrated; all 5 original child sitemap paths are preserved.')
+
+# Every published content body, image, script, and frame has a bounded source.
+class Security(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.in_script=False
+    def handle_starttag(self,tag,attrs):
+        a=dict(attrs)
+        assert not any(k.lower().startswith('on') for k in a), 'Inline event handler'
+        assert 'style' not in a, 'Unexpected inline CSS'
+        assert tag not in ('object','embed','base'), 'Active content element'
+        for name in ('href','src','action'):
+            if name in a:
+                u=urlsplit(a[name])
+                assert u.scheme.lower() in ('','http','https','mailto'), 'Unsafe URL'
+        if tag=='script':
+            assert set(a)<= {'src','defer'}, 'Unexpected script attributes'
+            assert urlsplit(a.get('src','')).path.endswith(('/assets/site.js','/assets/search-data.js')), 'Unknown script'
+            assert not urlsplit(a['src']).scheme and not urlsplit(a['src']).netloc, 'Remote script'
+            self.in_script=True
+        if tag=='iframe':
+            assert a.get('src')=='https://sub.longevitymarketcap.com/embed', 'Unknown frame'
+            assert 'sandbox' in a and 'allow-top-navigation' not in a['sandbox'].split(), 'Unrestricted frame'
+        if tag in ('img','link') and 'src' in a:
+            assert not urlsplit(a['src']).scheme and not urlsplit(a['src']).netloc, 'Remote image'
+    def handle_endtag(self,tag):
+        if tag=='script': self.in_script=False
+    def handle_data(self,data):
+        assert not self.in_script or not data.strip(), 'Inline script'
+
+for f in OUT.rglob('*.html'):
+    html=f.read_text()
+    Security().feed(html)
+    if f.parent.name!='feed':
+        assert 'Content-Security-Policy' in html, 'Missing CSP'
+audit=json.loads((ROOT/'source/asset-audit.json').read_text())
+for name,item in audit['assets'].items():
+    assert hashlib.sha256((OUT/'assets'/name).read_bytes()).hexdigest()==item['output_sha256'], 'Asset hash mismatch'
+from sanitize_content import sanitize
+for malicious in [
+    '<script>alert(1)</script>',
+    '<p onclick="alert(1)">Text</p>',
+    '<a href="javascript:alert(1)">Text</a>',
+    '<iframe src="https://example.com"></iframe>',
+    '<img src="https://example.com/a.png">',
+    '<span style="background:url(https://example.com)">Text</span>',
+]:
+    try:
+        sanitize(malicious,lambda path:path)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError('Sanitizer accepted unsafe content')
+print('PASS: Content allowlist, active-content restrictions, CSP, and audited asset hashes.')
