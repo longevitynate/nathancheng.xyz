@@ -40,13 +40,13 @@ audit_path = ROOT/'source/asset-audit.json'
 if not audit_path.is_file():
     raise SystemExit('Prepare the four assets with prepare_assets.py before building this draft.')
 asset_report = json.loads(audit_path.read_text())
-for name in ['hero.png','avatar.png','portrait.jpg','lora.woff']:
+for name in ['hero.png','avatar.png','portrait.jpg','nathan-serif.woff']:
     path = ROOT/'assets'/name
     assert path.is_file(), f'Missing sanitized asset: {name}'
     assert hashlib.sha256(path.read_bytes()).hexdigest() == asset_report['assets'][name]['output_sha256'], f'Asset changed since audit: {name}'
 
 OUT.mkdir(exist_ok=True)
-asset_names = {'style.css','site.js','favicon.svg','hero.png','avatar.png','portrait.jpg','lora.woff'}
+asset_names = {'style.css','site.js','favicon.svg','FONT-LICENSE.txt','hero.png','avatar.png','portrait.jpg','nathan-serif.woff'}
 assert {p.name for p in (ROOT/'assets').iterdir() if p.is_file()} == asset_names, 'Unexpected asset file'
 (OUT/'assets').mkdir(exist_ok=True)
 for name in asset_names:

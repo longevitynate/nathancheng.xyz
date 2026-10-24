@@ -21,7 +21,7 @@ SOURCES = {
  'hero.png':'https://nathancheng.xyz/wp-content/uploads/2021/05/Nathan-padded-avatar-3.png',
  'avatar.png':'https://secure.gravatar.com/avatar/8b6933b086bd3597583b9f6673bf12e6?s=160&d=mm&r=g',
  'portrait.jpg':'https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867-768x1024.jpg',
- 'lora.woff':'https://nathancheng.xyz/wp-content/uploads/2025/09/0QI6MX1D_JOuGQbT0gvTJPa787weuyJF.woff'
+ 'nathan-serif.woff':'https://nathancheng.xyz/wp-content/uploads/2025/09/0QI6MX1D_JOuGQbT0gvTJPa787weuyJF.woff'
 }
 
 def digest(data): return hashlib.sha256(data).hexdigest()
@@ -91,6 +91,13 @@ def rebuild_font(path):
     sanitizer = subset.Subsetter(options=options)
     sanitizer.populate(glyphs=font.getGlyphOrder())
     sanitizer.subset(font)
+    # Preserve copyright/license records, but rename the modified font because
+    # the original license reserves the Lora family name.
+    renamed = {1:'Nathan Serif',2:'Regular',3:'NathanSerif-Regular-20261024',
+               4:'Nathan Serif Regular',6:'NathanSerif-Regular',16:'Nathan Serif',17:'Regular',18:'Nathan Serif Regular'}
+    for record in font['name'].names:
+        if record.nameID in renamed:
+            record.string = renamed[record.nameID].encode(record.getEncoding(),errors='replace')
     font.flavor = 'woff'
     font.flavorData = None
     out = BytesIO()
@@ -102,7 +109,7 @@ def rebuild_font(path):
     for glyph in check['glyf'].glyphs.values():
         if hasattr(glyph,'program'):
             assert len(glyph.program.getBytecode()) == 0
-    return rebuilt, {'source_url':SOURCES['lora.woff'],'input_sha256':digest(data),
+    return rebuilt, {'source_url':SOURCES['nathan-serif.woff'],'input_sha256':digest(data),
                      'output_sha256':digest(rebuilt),'bytes':len(rebuilt),
                      'method':'Rebuild recognized TrueType tables; remove hint programs and opaque metadata'}
 
@@ -115,7 +122,7 @@ def main():
     for key,name,size in [('hero','hero.png',(700,600)),('avatar','avatar.png',(160,160)),
                           ('portrait','portrait.jpg',(768,1024))]:
         outputs[name] = rebuild_image(getattr(args,key),name,size)
-    outputs['lora.woff'] = rebuild_font(args.font)
+    outputs['nathan-serif.woff'] = rebuild_font(args.font)
     # Write only after every input passes, so failure leaves the site unchanged.
     for name,(data,record) in outputs.items():
         (ROOT/'assets'/name).write_bytes(data)

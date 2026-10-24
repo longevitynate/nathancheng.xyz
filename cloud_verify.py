@@ -45,7 +45,7 @@ if not (ROOT/'source/asset-audit.json').exists():
             ('hero','hero.png','https://nathancheng.xyz/wp-content/uploads/2021/05/Nathan-padded-avatar-3.png','png',1_000_000),
             ('avatar','avatar.png','https://secure.gravatar.com/avatar/8b6933b086bd3597583b9f6673bf12e6?s=160&d=mm&r=g','png',500_000),
             ('portrait','portrait.jpg','https://nathancheng.xyz/wp-content/uploads/2019/02/IMG_3867-768x1024.jpg','jpg',3_000_000),
-            ('font','lora.woff','https://nathancheng.xyz/wp-content/uploads/2025/09/0QI6MX1D_JOuGQbT0gvTJPa787weuyJF.woff','woff',1_000_000),
+            ('font','nathan-serif.woff','https://nathancheng.xyz/wp-content/uploads/2025/09/0QI6MX1D_JOuGQbT0gvTJPa787weuyJF.woff','woff',1_000_000),
         ]
         args=['prepare_assets.py']
         for flag,name,url,kind,limit in selections:
@@ -57,7 +57,7 @@ run('verify.py')
 
 # Export only rebuilt assets and verified public-site files. This does not
 # give the build job write permission to the repository.
-files=[ROOT/'assets'/n for n in ('hero.png','avatar.png','portrait.jpg','lora.woff')]
+files=[ROOT/'assets'/n for n in ('hero.png','avatar.png','portrait.jpg','nathan-serif.woff')]
 files.extend([ROOT/'source/asset-audit.json',ROOT/'verification.json'])
 files.extend(p for p in sorted((ROOT/'docs').rglob('*')) if p.is_file())
 for path in files:
