@@ -105,6 +105,7 @@ def rebuild_font(path):
     for record in font['name'].names:
         if record.nameID in renamed:
             record.string = renamed[record.nameID].encode(record.getEncoding(),errors='replace')
+    font.recalcTimestamp = False
     font.flavor = 'woff'
     font.flavorData = None
     out = BytesIO()

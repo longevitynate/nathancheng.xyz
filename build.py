@@ -32,7 +32,7 @@ def write(route, html):
     dest = OUT / route.strip('/') / 'index.html'
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(html)
-from presentation import shell, meta_line, listing, homepage, post_footer
+from presentation import shell, meta_line, listing, homepage, post_footer, category_listing
 from sanitize_content import sanitize
 
 # Only audited, rebuilt assets may enter the published directory.
@@ -92,6 +92,8 @@ for kind, prefix, key in [('categories','category','categories'),('tags','tag','
     for term in json.loads((ROOT/'source'/f'{kind}.json').read_text()):
         route = f'/{prefix}/{term["slug"]}/'
         body = f'<section class="archive"><header class="archive-heading"><p class="widget-label">{escape(prefix.title())}</p><h1>{escape(term["name"])}</h1></header>{listing([i for i in META if term["id"] in i.get(key,[])],route)}</section>'
+        if kind == 'categories':
+            body = category_listing([i for i in META if term['id'] in i.get(key,[])], term['name'], route)
         write(route,shell(term['name'],route,body)); archives.append(route)
 route = '/author/nathan/'
 write(route,shell('Nathan Cheng',route,f'<section class="archive"><header class="archive-heading"><p class="widget-label">Author</p><h1>Nathan Cheng</h1><p>{escape(HOME["author"].strip())}</p></header>{listing([i for i in META if i["type"]=="post"],route)}</section>')); archives.append(route)

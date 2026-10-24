@@ -78,6 +78,20 @@ def homepage(featured, content):
     post = f'<article class="article post"><header class="article-heading"><h2 class="article-title"><a href="{featured["slug"]}/">{escape(unescape(featured["title"]["rendered"]))}</a></h2>{meta_line(featured,"/")}</header><div class="prose" data-original-content>{content}</div></article>'
     return hero + layout(post,'/')
 
+def category_listing(items, name, route):
+    cards = []
+    for index,item in enumerate(items):
+        link=relative('/'+item['slug']+'/',route)
+        title=escape(unescape(item['title']['rendered']))
+        minutes=5 if item['slug'].startswith('day-1-') else 4 if item['slug'].startswith('ride-along-') else 2
+        if index==0:
+            cards.append(f'<article class="category-lead"><h2><a href="{link}">{title}</a></h2><p><a href="{relative("/author/nathan/",route)}">Nathan Cheng</a> <span>·</span> {date_label(item)} <span>·</span> {minutes} minute read</p></article>')
+        else:
+            cards.append(f'<article class="category-card"><p class="reading-time">{minutes} minute read</p><h2><a href="{link}">{title}</a></h2><time datetime="{item["date"][:10]}">{date_label(item)}</time></article>')
+    # The original category template moves every post into its featured block,
+    # leaving a "0 posts" archive below. Preserve that visible wording.
+    return '<section class="category-featured">'+''.join(cards)+'</section>'+f'<header class="archive-heading"><p class="widget-label">Browsing Category</p><h1>{escape(name)}</h1><p>0 posts</p></header><div class="archive-empty"><p>It seems we cannot find what you are looking for. Perhaps searching can help.</p>{search_form(route,"archive")}</div>'
+
 def post_footer(item, route):
     tag_html = ''
     if item.get('tags'):
