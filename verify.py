@@ -58,9 +58,10 @@ print(f'PASS: All {len(live_paths)} live sitemap URLs are migrated; all 5 origin
 
 # Every published content body, image, script, and frame has a bounded source.
 class Security(HTMLParser):
-    def __init__(self):
+    def __init__(self, file):
         super().__init__()
         self.in_script=False
+        self.file=file
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
         assert not any(k.lower().startswith('on') for k in a), 'Inline event handler'
@@ -72,7 +73,8 @@ class Security(HTMLParser):
                 assert u.scheme.lower() in ('','http','https','mailto'), 'Unsafe URL'
         if tag=='script':
             assert set(a)<= {'src','defer'}, 'Unexpected script attributes'
-            assert urlsplit(a.get('src','')).path.endswith(('/assets/site.js','/assets/search-data.js')), 'Unknown script'
+            source=(self.file.parent/urlsplit(a.get('src','')).path).resolve()
+            assert source in {(OUT/'assets/site.js').resolve(),(OUT/'assets/search-data.js').resolve()}, 'Unknown script'
             assert not urlsplit(a['src']).scheme and not urlsplit(a['src']).netloc, 'Remote script'
             self.in_script=True
         if tag=='iframe':
@@ -87,7 +89,7 @@ class Security(HTMLParser):
 
 for f in OUT.rglob('*.html'):
     html=f.read_text()
-    Security().feed(html)
+    Security(f).feed(html)
     if f.parent.name!='feed':
         assert 'Content-Security-Policy' in html, 'Missing CSP'
 audit=json.loads((ROOT/'source/asset-audit.json').read_text())

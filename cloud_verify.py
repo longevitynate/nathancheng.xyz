@@ -37,6 +37,7 @@ def download(url,path,kind,max_bytes):
 def run(*args):
     subprocess.run([sys.executable,*args],cwd=ROOT,check=True,timeout=120)
 
+subprocess.run(['node','--check','assets/site.js'],cwd=ROOT,check=True,timeout=30)
 run('-m','py_compile','build.py','presentation.py','sanitize_content.py','prepare_assets.py','verify.py')
 if not (ROOT/'source/asset-audit.json').exists():
     with tempfile.TemporaryDirectory(prefix='nathan-selected-assets-') as folder:
